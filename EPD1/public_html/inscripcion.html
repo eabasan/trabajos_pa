@@ -5,15 +5,63 @@
 </head>
 <body>
     <header>
-        <h1>Título de la página (ej. Inicio, Ponentes, etc.)</h1>
+        <h1>Inscripci&oacute;n</h1>
         <nav>
-            <!-- Aquí irán los enlaces de navegación -->
+            <h4>
+                Navega r&aacute;pidamente
+            </h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html">Iniciar Sesi&oacute;n</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="ponentes.html">Ponentes</a></li>
+                <li><a href="asociaciones.html">Asociaciones</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
         </nav>
     </header>
     
     <main>
-        <!-- Aquí va el contenido específico de cada archivo -->
-    </main>
+    <section>
+        <h2>Formulario de Inscripci&oacute;n</h2>
+        <p>Rellena tus datos para asegurar tu plaza en el evento. Las plazas son limitadas.</p>
+        
+        <form action="index.html" method="GET">
+            <fieldset>
+                <legend>Datos Personales y Acad&eacute;micos</legend>
+                
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br><br>
+                
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+                <br><br>
+                
+                <label for="correo">Correo electr&oacute;nico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <br><br>
+
+                <!-- Aquí entra la magia del datalist de HTML5 -->
+                <label for="titulacion">Titulaci&oacute;n o Facultad:</label>
+                <input list="grados" id="titulacion" name="titulacion" placeholder="Escribe o selecciona..." required>
+                
+                <datalist id="grados">
+                    <option value="Ingenier&iacute;a Inform&aacute;tica">
+                    <option value="Administraci&oacute;n y Direcci&oacute;n de Empresas">
+                    <option value="Derecho">
+                    <option value="Comunicaci&oacute;n Audiovisual">
+                </datalist>
+                <br><br>
+                
+                <button type="submit">Enviar Inscripci&oacute;n</button>
+            </fieldset>
+        </form>
+    </section>
+</main>
     
     <footer>
         <p>Organización del evento de ponencias y empleo</p>
