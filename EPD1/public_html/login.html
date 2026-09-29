@@ -5,14 +5,39 @@
 </head>
 <body>
     <header>
-        <h1>Título de la página (ej. Inicio, Ponentes, etc.)</h1>
+        <h1>Iniciar sesi&oacute;n</h1>
         <nav>
-            <!-- Aquí irán los enlaces de navegación -->
+            <h4>
+                Navega r&aacute;pidamente
+            </h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="ponentes.html">Ponentes</a></li>
+                <li><a href="asociaciones.html">Asociaciones</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
         </nav>
     </header>
     
     <main>
-        <!-- Aquí va el contenido específico de cada archivo -->
+        <section>
+            <form action="index.html" method="POST">
+                <fieldset>
+                    <legend>Datos de acceso</legend>
+                    <label for="usuario">Correo electr&oacute;nico:</label>
+                    <input type="email" id="usuario" name="usuario" placeholder="alumno@alu.upo.es" required>
+                    <label for="contraseña">Contrase&ntilde;a:</label>
+                    <input type="password" id="contraseña" placeholder="Introduce la contrase&ntilde;a" required>
+                    <br></br>
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
     </main>
     
     <footer>
