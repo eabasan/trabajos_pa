@@ -5,18 +5,67 @@
 </head>
 <body>
     <header>
-        <h1>Título de la página (ej. Inicio, Ponentes, etc.)</h1>
+        <h1>Soporte t&eacute;cnico</h1>
         <nav>
-            <!-- Aquí irán los enlaces de navegación -->
+            <h4>
+                Navega r&aacute;pidamente
+            </h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html">Inicio de sesi&oacute;n</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="ponentes.html">Ponentes</a></li>
+                <li><a href="asociaciones.html">Asociaciones</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+            </ul>
         </nav>
     </header>
     
     <main>
-        <!-- Aquí va el contenido específico de cada archivo -->
-    </main>
+    <section>
+        <h2>Contacto y Ubicaci&oacute;n</h2>
+        <p>Tienes alguna duda sobre el congreso? Cont&aacute;ctanos o ven a vernos a la oficina de la organizaci&oacute;n.</p>
+        
+        <address>
+            <strong>Comit&eacute; Organizador - Evento IA y Empleo</strong><br>
+            Facultad de Inform&aacute;tica, Despacho 12<br>
+            Campus Universitario, 28040 Madrid<br><br>
+            
+            Correo: <a href="mailto:info@evento-ia.es">info@evento-ia.es</a><br>
+            
+            Tel&eacute;fono: <a href="tel:+34900123456">900 123 456</a>
+        </address>
+
+        <hr>
+
+        <h3>Env&iacute;anos tu consulta</h3>
+        <form action="index.html" method="POST">
+            <fieldset>
+                <legend>Formulario de atenci&oacute;n al asistente</legend>
+                
+                <label for="nombre_contacto">Nombre:</label>
+                <input type="text" id="nombre_contacto" name="nombre" required>
+                <br><br>
+                
+                <label for="correo_contacto">Email:</label>
+                <input type="email" id="correo_contacto" name="correo" required>
+                <br><br>
+                
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escribe tu duda aqu&iacute;..." required></textarea>
+                <br><br>
+                
+                <button type="submit">Enviar mensaje</button>
+            </fieldset>
+        </form>
+    </section>
+</main>
     
     <footer>
-        <p>Organización del evento de ponencias y empleo</p>
+        <p>Organizaci&oacute;n del evento de ponencias y empleo</p>
     </footer>
 </body>
 </html>
