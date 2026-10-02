@@ -1,5 +1,4 @@
-Grupo 10.
-
+RELACIÓN DE ETIQUETAS HTML5 UTILIZADAS:
 - <header>, <nav>, <main>, <footer>: en todas las páginas para marcar las zonas fijas de la web.
 - <section> y <article>: en las secciones de contenido y fichas independientes (noticias, actividades, ponentes).
 - <aside>: en index.html para el aviso de aforo limitado del auditorio.
@@ -25,8 +24,8 @@ Grupo 10.
 
 - <table>, <caption>, <thead>, <tbody>, <tr>, <th>, <td>: en programa.html (con celdas combinadas colspan y rowspan), noticia1.html y noticia2.html para estructurar horarios y datos.
 
-Aclaración:
-<embed>: No se utiliza porque se suele emplear para incrustar archivos externos locales pesados (como PDFs).
 
-
-https://tutecnologia.com/como-funciona-la-inteligencia-artificial-sin-palabras-complicadas/
+FUENTES DE LOS ARTÍCULOS DE NOTICIAS:
+- Noticia 1: Extraída y adaptada de:
+  https://tutecnologia.com/como-funciona-la-inteligencia-artificial-sin-palabras-complicadas/
+- Noticia 2: Extraída y adaptada de:
