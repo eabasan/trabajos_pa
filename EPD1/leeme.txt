@@ -24,8 +24,11 @@ RELACIÓN DE ETIQUETAS HTML5 UTILIZADAS:
 
 - <table>, <caption>, <thead>, <tbody>, <tr>, <th>, <td>: en programa.html (con celdas combinadas colspan y rowspan), noticia1.html y noticia2.html para estructurar horarios y datos.
 
+NOTA SOBRE CODIFICACIÓN:
+- Para evitar problemas de codificación, los caracteres especiales (tildes, eñes, aperturas de interrogación y comillas) se han codificado mediante entidades HTML estándar (&aacute;, &ntilde;, &iquest;, etc.).
 
 FUENTES DE LOS ARTÍCULOS DE NOTICIAS:
 - Noticia 1: Extraída y adaptada de:
   https://tutecnologia.com/como-funciona-la-inteligencia-artificial-sin-palabras-complicadas/
 - Noticia 2: Extraída y adaptada de:
+  https://www.santander.com/es/stories/ninos-y-adolescentes-los-protagonistas-de-nuestro-nuevo-espacio-de-seguridad-online
