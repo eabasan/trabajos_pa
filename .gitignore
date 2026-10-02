@@ -1,0 +1,13 @@
+# NetBeans
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+/build/
+/dist/
+
+# Archivos privados de NetBeans
+**/nbproject/private/
+
+# Archivos temporales
+*.log
+*.tmp
