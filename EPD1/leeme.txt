@@ -1,0 +1,32 @@
+Grupo 10.
+
+- <header>, <nav>, <main>, <footer>: en todas las páginas para marcar las zonas fijas de la web.
+- <section> y <article>: en las secciones de contenido y fichas independientes (noticias, actividades, ponentes).
+- <aside>: en index.html para el aviso de aforo limitado del auditorio.
+- <hgroup>: en index.html para agrupar el título principal con su subtítulo.
+- <address>: en contacto.html para los datos de ubicación física, teléfono y sede de la UPO.
+
+- <mark>: en index.html para resaltar el nombre de la feria.
+- <ruby>, <rt>, <rp>: en index.html para poner la aclaración sobre las siglas "UPO".
+- <wbr>: en index.html y contacto.html para sugerir el corte en correos electrónicos largos.
+- <time>: en noticias.html, noticia1.html y noticia2.html para indicar la fecha exacta de publicación.
+
+- <figure> y <figcaption>: en index.html, asociaciones.html, contacto.html, ponentes y noticias para acompañar las fotos con su pie.
+- <video>, <audio>, <track> y <source>: en multimedia.html para el vídeo promocional con subtítulos y el audio de ambientación.
+- <svg>: en index.html para dibujar el icono circular verde de "Inscripciones abiertas".
+- <math>: en talleres.html para representar la fórmula matemática en el taller de robótica.
+
+- <fieldset> y <legend>: en contacto.html, inscripcion.html y login.html para agrupar los bloques del formulario.
+- <progress> y <meter>: en inscripcion.html para mostrar el paso del registro y el porcentaje de aforo ocupado.
+- <datalist>: en inscripcion.html para sugerir opciones de cómo conocieron el evento.
+- <output>: en inscripcion.html para mostrar el número seleccionado en la barra de rango.
+- <select>, <option> y <textarea>: en contacto.html e inscripcion.html para elegir titulación/motivo y escribir mensajes.
+- <details> y <summary>: en contacto.html para el desplegable de preguntas frecuentes.
+
+- <table>, <caption>, <thead>, <tbody>, <tr>, <th>, <td>: en programa.html (con celdas combinadas colspan y rowspan), noticia1.html y noticia2.html para estructurar horarios y datos.
+
+Aclaración:
+<embed>: No se utiliza porque se suele emplear para incrustar archivos externos locales pesados (como PDFs).
+
+
+https://tutecnologia.com/como-funciona-la-inteligencia-artificial-sin-palabras-complicadas/
