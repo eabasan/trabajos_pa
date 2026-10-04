@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="es">
+    <head>
+        <title>Evento Universitario y Empleo</title>
+        <meta charset="ISO-8859-1">
+        <meta name="description" content="Portal oficial de ponencias y empleo.">
+    </head>
+    <body>
+        <header>
+            <h1>Evento Universitario y Empleo</h1>
+            <p>Conectando talento y oportunidades. Edici&oacute;n 2026.</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="ponentes.html">Ponentes</a></li>
+                <li><a href="asociaciones.html">Asociaciones</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="inscripcion.html">Inscripciones</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>   
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Formulario de Inscripci&oacute;n al Evento</h2>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Datos Personales y Acad&eacute;micos</legend>
+                    <p>
+                        <label for="nombre">Nombre y apellidos:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Nombre Completo">                        
+                    </p>
+                    <p>
+                        <label for="nacimiento">Fecha de nacimiento:</label>
+                        <input type="date" id="nacimiento" name="nacimiento" min="1980-01-01" max="2009-12-31" required>                        
+                    </p>
+                    <p>
+                        <label for="telf">Tel&eacute;fono m&oacute;vil:</label>
+                        <input type="tel" id="telf" name="telefono" pattern="[0-9]{9}" title="Debe contener 9 d&iacute;gitos" placeholder="123456789" required>
+                    </p>
+                    <p>
+                        <label for="estudios">Titulaci&oacute;n:</label>
+                        <input list="grados" id="estudios" name="estudios">
+                        <datalist id="grados">
+                            <option value="Ingenier&iacute;a Inform&aacute;tica">
+                            <option value="Administraci&oacute;n y Direcci&oacute;n de Empresas">
+                            <option value="Derecho">
+                            <option value="Medicina">
+                        </datalist>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias de Asistencia</legend>
+                    <p>
+                        <label for="dias">N&uacute;mero de d&iacute;as que asistir&aacute;:</label>
+                        <input type="number" id="dias" name="dias" min="1" max="3" value="1">
+                    </p>
+                    <p>
+                        <label>Tipo de entrada:</label><br>
+                        <input type="radio" id="basica" name="entrada" value="basica" checked>
+                        <label for="basica">Gratuita</label><br>
+                        <input type="radio" id="vip" name="entrada" value="vip">
+                        <label for="vip">VIP: Con Acceso a c&aacute;tering</label>
+                    </p>
+                </fieldset>
+                <p>
+                    <input type="submit" value="Confirmar Inscripci&oacute;n">
+                    <input type="reset" value="Borrar Formulario">
+                </p>
+
+            </form>
+        </main>
+
+        <footer>
+            <small>&copy; 2026 Universidad - Evento de Empleo.</small>
+        </footer>
+    </body>
+</html>

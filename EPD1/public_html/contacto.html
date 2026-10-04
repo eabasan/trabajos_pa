@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="es">
+    <head>
+        <title>Evento Universitario y Empleo</title>
+        <meta charset="ISO-8859-1">
+        <meta name="description" content="Portal oficial de ponencias y empleo.">
+    </head>
+    <body>
+        <header>
+            <h1>Evento Universitario y Empleo</h1>
+            <p>Conectando talento y oportunidades. Edici&oacute;n 2026.</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="ponentes.html">Ponentes</a></li>
+                <li><a href="asociaciones.html">Asociaciones</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="inscripcion.html">Inscripciones</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>   
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Contacta con la Organizaci&oacute;n</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Env&iacute;anos tu consulta</legend>
+                    <p>
+                        <label for="linkedin">Tu LinkedIn:</label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/perfil" size="25">
+                    </p>
+                    <p>
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </p>
+                    <p>
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea id="mensaje" name="mensaje" rows="5" cols="40" required placeholder="Escribe aqu&iacute;"></textarea>
+                    </p>
+                    <p>
+                        <label for="urgencia">Nivel de urgencia de la consulta:</label><br>
+                        Baja <input type="range" id="urgencia" name="urgencia" min="1" max="3"> Alta
+                    </p>
+                    <p>
+                        <label for="color_acreditacion">Elige tu color para el cord&oacute;n de tu acreditaci&oacute;n:</label>
+                        <input type="color" id="color_acreditacion" name="color_acreditacion" value="#0055ff">
+                    </p>
+                    <p>
+                        <button type="submit">Enviar Mensaje</button>
+                    </p>
+                </fieldset>
+            </form>
+        </main>
+
+        <footer>
+            <small>&copy; 2026 Universidad - Evento de Empleo.</small>
+        </footer>
+    </body>
+</html>
