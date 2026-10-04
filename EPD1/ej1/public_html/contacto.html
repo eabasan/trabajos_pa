@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Jornadas de Empleo</title>
+</head>
+<body>
+    <header>
+        <h1>Contacto y Ubicaci&oacute;n</h1>
+        <p>Resoluci&oacute;n de dudas e informaci&oacute;n sobre la sede del evento</p>
+    </header>
+
+    <nav aria-label="Men&uacute; principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="ponentes.html">Ponentes</a></li>
+            <li><a href="asociaciones.html">Asociaciones</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Datos de contacto</h2>
+            <address>
+                <strong>Escuela Polit&eacute;cnica Superior</strong><br>
+                Edificio 2, Planta Baja<br>
+                Campus Universitario<br>
+                Tel&eacute;fono: +34 954 999 999<br>
+                Correo: <a href="mailto:info-empleo@universidad.es">upo@upo.es</a>
+            </address>
+        </section>
+
+        <section>
+            <h2>Env&iacute;anos tu Consulta</h2>
+            <form action="contacto.html" method="post">
+                <p>
+                    <label for="remitente">Nombre completo:</label><br>
+                    <input type="text" id="remitente" name="remitente" required placeholder="Tu nombre">
+                </p>
+                <p>
+                    <label for="correo_contacto">Correo electr&oacute;nico:</label><br>
+                    <input type="email" id="correo_contacto" name="correo_contacto" required placeholder="nombre@correo.com">
+                </p>
+                <p>
+                    <label for="asunto">Asunto:</label><br>
+                    <input type="text" id="asunto" name="asunto" required placeholder="Motivo de tu mensaje">
+                </p>
+                <p>
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="45" required placeholder="Escribe tu consulta aqu&iacute;..."></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Enviar mensaje">
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; UPO - 2026</p>
+    </footer>
+</body>
+</html>

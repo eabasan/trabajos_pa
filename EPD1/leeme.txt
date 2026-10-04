@@ -1,0 +1,81 @@
+MEMORIA DE USO DE ETIQUETAS HTML5 - EPD 1
+Asignatura: Programación Avanzada
+Grupo: 10
+Curso: 2026/2027
+
+A continuación se detalla la justificación y localización de las etiquetas semánticas y elementos de HTML5 empleados en la estructuración del sitio web del evento:
+
+1. ESTRUCTURACIÓN SEMÁNTICA GLOBAL
+----------------------------------
+- <header>:
+  * Ubicación: En todas las páginas del sitio web (index.html, programa.html, ponentes.html, noticias.html, etc.).
+  * Objetivo: Delimitar el encabezado del documento o de artículos específicos, agrupando títulos principales e información introductoria del sitio o de la noticia.
+
+- <nav>:
+  * Ubicación: Presente en todas las páginas web.
+  * Objetivo: Contener los bloques de navegación y enlaces. Se emplea para garantizar de forma estricta la jerarquía de navegación solicitada (menú global en el primer nivel y enlaces exclusivos padre-hijas en las páginas de segundo nivel).
+
+- <main>:
+  * Ubicación: Presente en todas las páginas web.
+  * Objetivo: Envolver el contenido central y exclusivo de cada documento, separándolo de cabeceras, menús y pies de página para mejorar la accesibilidad y el parseo de motores de búsqueda.
+
+- <section>:
+  * Ubicación: Empleado en index.html, programa.html, actividades.html, contacto.html, login.html, noticia1.html y noticia2.html.
+  * Objetivo: Agrupar contenidos temáticos específicos dentro de una página (horarios, bloques temáticos de noticias, categorías de actividades).
+
+- <article>:
+  * Ubicación: ponente1.html, ponente2.html, asociaciones.html, noticia1.html y noticia2.html.
+  * Objetivo: Encapsular unidades de contenido autónomo e independiente (fichas individuales de ponentes, fichas de asociaciones y artículos completos de noticias).
+
+- <aside>:
+  * Ubicación: asociaciones.html.
+  * Objetivo: Alojar información tangencial o secundaria relacionada con el contenido principal (avisos de afiliación a los colectivos).
+
+- <footer>:
+  * Ubicación: Al final de todas las páginas del sitio.
+  * Objetivo: Definir el pie de página institucional con la información de autoría, derechos de copia y fecha del evento.
+
+- <address>:
+  * Ubicación: contacto.html.
+  * Objetivo: Presentar semánticamente la información de contacto físico, correo institucional y teléfono de la organización del evento.
+
+
+2. ELEMENTOS DE CONTENIDO Y MULTIMEDIA
+--------------------------------------
+- <figure> y <figcaption>:
+  * Ubicación: ponente1.html, ponente2.html, noticia1.html y noticia2.html.
+  * Objetivo: Asociar semánticamente imágenes relativas al contenido con su correspondiente pie de foto explicativo y los enlaces a las versiones en alta resolución.
+
+- <video> y <source>:
+  * Ubicación: multimedia.html.
+  * Objetivo: Reproducir vídeo promocional nativo en HTML5 sin necesidad de complementos externos (plugins), haciendo uso de enlaces externos en formatos MP4 y OGG con el atributo 'controls'.
+
+- <audio> y <source>:
+  * Ubicación: multimedia.html.
+  * Objetivo: Proporcionar un reproductor de audio integrado de forma nativa para el programa sonoro / podcast informativo de orientación laboral.
+
+- <details> y <summary>:
+  * Ubicación: asociaciones.html.
+  * Objetivo: Mostrar u ocultar información desplegable de manera nativa sin necesidad de código JavaScript, detallando stands y horarios de las asociaciones participantes.
+
+
+3. FORMULARIOS AVANZADOS Y CONTROLES HTML5
+------------------------------------------
+- Nuevos tipos de <input> (email, date, range, file, tel, etc.):
+  * Ubicación: inscripcion.html, contacto.html y login.html.
+  * Objetivo: Aprovechar la validación nativa del navegador, la adaptación de teclados virtuales en dispositivos móviles y la captura de datos estructurados (rangos, fechas y ficheros adjuntos).
+
+- <output>:
+  * Ubicación: inscripcion.html.
+  * Objetivo: Mostrar en tiempo real el valor seleccionado por el usuario en el control deslizable de rango (input type="range") mediante el evento 'oninput'.
+
+- Atributos HTML5 (required, autofocus, placeholder, accept):
+  * Ubicación: inscripcion.html, contacto.html y login.html.
+  * Objetivo: Fomentar la usabilidad guiada y la validación en cliente previa al envío de formularios.
+
+
+4. ELEMENTOS TABULARES Y ACCESIBILIDAD
+--------------------------------------
+- <table>, <caption>, <thead>, <tbody>, <tfoot>, <th>:
+  * Ubicación: programa.html y noticia1.html.
+  * Objetivo: Presentación estructurada de datos tabulares con títulos descriptivos (caption) y atributos de alcance (scope="col", scope="row"). En programa.html se demuestran fusiones de columnas (colspan), de filas (rowspan) y simultáneas (rowspan y colspan combinados).

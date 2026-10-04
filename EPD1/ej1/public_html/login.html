@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso de Usuarios - Jornadas de Empleo</title>
+</head>
+<body>
+    <header>
+        <h1>Portal de Acceso</h1>
+        <p>&Aacute;rea restringida para ponentes, empresas y participantes</p>
+    </header>
+
+    <nav aria-label="Men&uacute; principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="ponentes.html">Ponentes</a></li>
+            <li><a href="asociaciones.html">Asociaciones</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Inicio de Sesi&oacute;n</h2>
+            <form action="login.html" method="post">
+                <p>
+                    <label for="identificador">Nombre de usuario o correo electr&oacute;nico:</label><br>
+                    <input type="text" id="identificador" name="identificador" required autofocus placeholder="usuario@upo.es">
+                </p>
+
+                <p>
+                    <label for="clave">Contrase&ntilde;a:</label><br>
+                    <input type="password" id="clave" name="clave" required placeholder="Introduce tu clave">
+                </p>
+
+                <p>
+                    <input type="checkbox" id="recordar" name="recordar">
+                    <label for="recordar">Recordar sesi&oacute;n en este equipo</label>
+                </p>
+
+                <p>
+                    <input type="submit" value="Iniciar Sesi&oacute;n">
+                </p>
+
+                <p>
+                    <small><a href="#">&iquest;Olvidaste tu contrase&ntilde;a?</a></small>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; UPO - 2026</p>
+    </footer>
+</body>
+</html>

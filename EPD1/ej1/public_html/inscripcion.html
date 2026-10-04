@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripci&oacute;n - Jornadas de Empleo</title>
+</head>
+<body>
+    <header>
+        <h1>Inscripci&oacute;n al Evento</h1>
+        <p>Formulario de registro para asistentes</p>
+    </header>
+
+    <nav aria-label="Men&uacute; principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="ponentes.html">Ponentes</a></li>
+            <li><a href="asociaciones.html">Asociaciones</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Datos de Registro</h2>
+            <form action="inscripcion.html" method="post" oninput="out_interes.value = interes.value">
+                <p>
+                    <label for="nombre">Nombre completo:</label><br>
+                    <input type="text" id="nombre" name="nombre" required autofocus placeholder="Tu nombre">
+                </p>
+
+                <p>
+                    <label for="correo">Correo institucional:</label><br>
+                    <input type="email" id="correo" name="correo" required placeholder="alumno@upo.es">
+                </p>
+
+                <p>
+                    <label for="fecha">Fecha de asistencia:</label><br>
+                    <input type="date" id="fecha" name="fecha" required>
+                </p>
+
+                <p>
+                    <label for="interes">Nivel de experiencia previa (0-10):</label><br>
+                    <input type="range" id="interes" name="interes" min="0" max="10" value="5">
+                    <output for="interes" id="out_interes" name="out_interes">5</output>
+                </p>
+
+                <p>
+                    <label for="cv">Adjuntar CV (.pdf):</label><br>
+                    <input type="file" id="cv" name="cv" accept=".pdf">
+                </p>
+
+                <p>
+                    <input type="checkbox" id="acepto" name="acepto" required>
+                    <label for="acepto">Acepto los t&eacute;rminos de participaci&oacute;n</label>
+                </p>
+
+                <p>
+                    <input type="submit" value="Enviar inscripci&oacute;n">
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; UPO - 2026</p>
+    </footer>
+</body>
+</html>
