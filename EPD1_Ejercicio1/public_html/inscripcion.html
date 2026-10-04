@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Inscripción al Evento</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario de Inscripción</h1>
+        <nav>
+            <a href="index.html">Inicio</a> | 
+            <a href="programa.html">Programa</a> | 
+            <a href="actividades.html">Actividades</a> |
+            <a href="ponentes.html">Ponentes</a> |
+            <a href="noticias.html">Noticias</a> |
+            <a href="contacto.html">Contacto</a> |
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Completa tus datos para asistir</h2>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez" autofocus><br><br>
+
+                    <label for="email">Correo Universitario:</label>
+                    <input type="email" id="email" name="email" required placeholder="usuario@universidad.edu"><br><br>
+
+                    <label for="web">Página web personal o LinkedIn:</label>
+                    <input type="url" id="web" name="web" placeholder="https://..."><br><br>
+
+                    <label for="fecha_nac">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha_nac" name="fecha_nac" min="1950-01-01" max="2010-12-31"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias del Evento</legend>
+
+                    <label for="hora_llegada">Hora de llegada estimada:</label>
+                    <input type="time" id="hora_llegada" name="hora_llegada"><br><br>
+
+                    <label for="acompanantes">Número de acompañantes:</label>
+                    <input type="number" id="acompanantes" name="acompanantes" min="0" max="5" value="0"><br><br>
+
+                    <label for="talla">Talla de camiseta (elige o escribe):</label>
+                    <input list="tallas" id="talla" name="talla">
+                    <datalist id="tallas">
+                        <option value="S">
+                        <option value="M">
+                        <option value="L">
+                        <option value="XL">
+                    </datalist><br><br>
+
+                    <label for="cv">Sube tu CV (PDF):</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf"><br><br>
+                    
+                    <label for="satisfaccion">Nivel de interés en las empresas (1-10):</label>
+                    <input type="range" id="satisfaccion" name="satisfaccion" min="1" max="10" value="5"><br><br>
+                </fieldset>
+
+                <input type="submit" value="Enviar Inscripción">
+                <input type="reset" value="Borrar Formulario">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Universidad - Evento de Empleo</p>
+    </footer>
+</body>
+</html>

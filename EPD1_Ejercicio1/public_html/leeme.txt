@@ -1,0 +1,13 @@
+ESTRUCTURA DE ETIQUETAS HTML5 - EJERCICIO 1
+
+A continuación se detallan las etiquetas semánticas de HTML5 empleadas y su objetivo:
+
+- <header>: Utilizado en todas las páginas para agrupar el encabezado, el título principal y los menús de navegación.
+- <nav>: Empleado dentro del header para definir el bloque de enlaces de navegación principal.
+- <main>: Usado para delimitar el contenido principal y exclusivo de cada página web.
+- <section>: Implementado para separar temáticamente los bloques de contenido dentro del main.
+- <article>: Empleado en las noticias para englobar el contenido autónomo de los artículos extraídos.
+- <time>: Usado en las noticias para representar la fecha de publicación de forma legible para la máquina.
+- <figure> y <figcaption>: Utilizados en las páginas de noticias para encapsular imágenes junto con su respectiva leyenda descriptiva.
+- <video>, <audio> y <source>: Añadidos para incrustar reproductores multimedia nativos (video en inicio, audio en multimedia).
+- Nuevos tipos de <input> (email, url, date, time, number, range, datalist): Implementados en inscripcion.html para aprovechar la validación nativa y controles de interfaz de HTML5.
