@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Inscripci&oacute;n - Root@UPO '26</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <header>
+            <h1>Inscripci&oacute;n al Evento Root@UPO '26</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="login.html">Acceso de usuarios</a></li>
+                    <li><a href="programa.html">Programa</a></li>
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a href="ponentes.html">Ponentes</a></li>
+                    <li><a href="asociaciones.html">Asociaciones</a></li>
+                    <li><a href="multimedia.html">Multimedia</a></li>
+                    <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Formulario de Registro para Estudiantes</h2>
+
+                <p>
+                    Rellena este formulario para solicitar tu
+                    acreditaci&oacute;n y participar en las
+                    entrevistas de empleo.
+                </p>
+
+                <p>
+                    Los campos marcados con un asterisco (*) son <mark>obligatorios</mark>.
+                </p>
+
+                <details>
+                    <summary>Pasos para participar en las jornadas</summary>
+                    <ol>
+                        <li>Solicitar la inscripci&oacute;n.</li>
+                        <li>Recoger la acreditaci&oacute;n en el Paraninfo.</li>
+                        <li>Participar en las actividades.</li>
+                    </ol>
+                    <p>
+                        <label for="paso_actual">Etapa actual: inscripci&oacute;n (1 de 3).</label>
+                        <br>
+                        <progress id="paso_actual" value="1" max="3">1 de 3</progress>
+                    </p>
+                    <p>
+                        El indicador identifica esta etapa del recorrido.
+                        No mide los campos rellenados ni confirma una inscripci&oacute;n.
+                    </p>
+                </details>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Datos Personales</legend>
+
+                        <p>
+                            <label for="nombre">Nombre completo (*):</label>
+                            <br>
+                            <input type="text"
+                                   id="nombre"
+                                   name="nombre"
+                                   required
+                                   maxlength="100"
+                                   autocomplete="name"
+                                   placeholder="Ej: Laura P&eacute;rez">
+                        </p>
+
+                        <p>
+                            <label for="correo">Correo de la UPO (*):</label>
+                            <br>
+                            <input type="email"
+                                   id="correo"
+                                   name="correo"
+                                   required
+                                   autocomplete="email"
+                                   placeholder="estudiante@upo.es">
+                        </p>
+
+                        <p>
+                            <label for="telefono">
+                                Tel&eacute;fono m&oacute;vil
+                                (9 cifras, sin prefijo):
+                            </label>
+                            <br>
+                            <input type="tel"
+                                   id="telefono"
+                                   name="telefono"
+                                   pattern="[0-9]{9}"
+                                   maxlength="9"
+                                   inputmode="numeric"
+                                   autocomplete="tel-national"
+                                   title="Introduce 9 cifras sin espacios ni prefijo."
+                                   placeholder="600123456">
+                        </p>
+
+                        <p>
+                            <label for="nacimiento">Fecha de nacimiento:</label>
+                            <br>
+                            <input type="date"
+                                   id="nacimiento"
+                                   name="nacimiento"
+                                   autocomplete="bday">
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Perfil Profesional</legend>
+
+                        <p>
+                            <label for="linkedin">
+                                Enlace a tu LinkedIn o portfolio:
+                            </label>
+                            <br>
+                            <input type="url"
+                                   id="linkedin"
+                                   name="linkedin"
+                                   placeholder="https://www.linkedin.com/in/tu-perfil">
+                        </p>
+
+                        <p>
+                            <label for="curso">
+                                Curso de carrera (del 1 al 4):
+                            </label>
+                            <br>
+                            <input type="number"
+                                   id="curso"
+                                   name="curso"
+                                   min="1"
+                                   max="4"
+                                   step="1"
+                                   value="1">
+                        </p>
+
+                        <p>
+                            <label for="nivel_hacking">
+                                Tu nivel de Hacking &Eacute;tico:
+                                de 0 (principiante) a 100 (avanzado)
+                            </label>
+                            <br>
+                            <input type="range"
+                                   id="nivel_hacking"
+                                   name="nivel_hacking"
+                                   min="0"
+                                   max="100"
+                                   step="10"
+                                   value="50">
+                        </p>
+
+                        <p>
+                            <label for="interes">
+                                &iquest;Qu&eacute; empresa te interesa?
+                            </label>
+                            <br>
+                            <input type="search"
+                                   id="interes"
+                                   name="interes"
+                                   list="empresas"
+                                   maxlength="100"
+                                   placeholder="Escribe o selecciona una empresa">
+
+                            <datalist id="empresas">
+                                <option value="Telef&oacute;nica"></option>
+                                <option value="Google"></option>
+                                <option value="Microsoft"></option>
+                                <option value="Indra"></option>
+                            </datalist>
+                        </p>
+
+                        <p>
+                            Las sugerencias son ejemplos de empresas
+                            de inter&eacute;s y no confirman su asistencia.
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferencias de Participaci&oacute;n</legend>
+
+                        <p>
+                            <label for="area">
+                                &Aacute;rea de inter&eacute;s principal (*):
+                            </label>
+                            <br>
+                            <select id="area" name="area" required>
+                                <option value="">Selecciona una opci&oacute;n</option>
+                                <option value="ciberseguridad">Ciberseguridad</option>
+                                <option value="criptografia">Criptograf&iacute;a</option>
+                                <option value="redes">Seguridad de redes</option>
+                                <option value="empleo">Orientaci&oacute;n laboral</option>
+                            </select>
+                        </p>
+
+                        <fieldset>
+                            <legend>
+                                &iquest;Buscas oportunidades de empleo
+                                o pr&aacute;cticas? (*)
+                            </legend>
+
+                            <p>
+                                <input type="radio"
+                                       id="busca_si"
+                                       name="busca_empleo"
+                                       value="si"
+                                       required>
+                                <label for="busca_si">S&iacute;</label>
+                            </p>
+
+                            <p>
+                                <input type="radio"
+                                       id="busca_no"
+                                       name="busca_empleo"
+                                       value="no">
+                                <label for="busca_no">No</label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>
+                                Actividades de inter&eacute;s
+                                (puedes elegir varias)
+                            </legend>
+
+                            <p>
+                                <input type="checkbox"
+                                       id="conferencias"
+                                       name="actividades"
+                                       value="conferencias">
+                                <label for="conferencias">Conferencias</label>
+                            </p>
+
+                            <p>
+                                <input type="checkbox"
+                                       id="talleres"
+                                       name="actividades"
+                                       value="talleres">
+                                <label for="talleres">
+                                    Talleres pr&aacute;cticos
+                                </label>
+                            </p>
+
+                            <p>
+                                <input type="checkbox"
+                                       id="feria"
+                                       name="actividades"
+                                       value="feria">
+                                <label for="feria">Feria de empleo</label>
+                            </p>
+                        </fieldset>
+
+                        <p>
+                            <label for="comentarios">
+                                Comentarios para la organizaci&oacute;n:
+                            </label>
+                            <br>
+                            <textarea id="comentarios"
+                                      name="comentarios"
+                                      rows="5"
+                                      cols="40"
+                                      maxlength="500"
+                                      placeholder="M&aacute;ximo 500 caracteres"></textarea>
+                        </p>
+                    </fieldset>
+
+                    <p>
+                        <label for="total_obligatorios">Total de respuestas obligatorias:</label>
+                        <output id="total_obligatorios"
+                                for="nombre correo area busca_si busca_no">4</output>.
+                        Son 2 datos personales, 1 &aacute;rea de inter&eacute;s
+                        y 1 respuesta sobre la b&uacute;squeda de empleo.
+                        Este total es fijo; no cuenta las respuestas completadas.
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Enviar Inscripci&oacute;n">
+                        <input type="reset" value="Borrar datos">
+                    </p>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <hr>
+
+            <p>
+                <a href="https://www.tebeosfera.com/T3content/img/T3_entidades/d/e/pablodeolavide.jpg"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="Ver logo de la UPO en grande">
+                    <img
+                        src="https://www.tebeosfera.com/T3content/img/T3_entidades/d/e/pablodeolavide.jpg"
+                        width="150"
+                        alt="Logo de la Universidad Pablo de Olavide">
+                </a>
+            </p>
+
+            <p>
+                &copy; 2026 Universidad Pablo de Olavide (UPO)
+                - Departamento de Inform&aacute;tica
+            </p>
+        </footer>
+    </body>
+</html>
