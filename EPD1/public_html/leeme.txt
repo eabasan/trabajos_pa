@@ -1,0 +1,62 @@
+LEEME - Root@UPO 2026
+
+ETIQUETAS HTML5 UTILIZADAS: UBICACION Y OBJETIVO
+
+- header: todas las paginas. Define el encabezado.
+
+- nav: todas las paginas. Agrupa los enlaces de navegacion.
+
+- main: todas las paginas. Identifica el contenido principal.
+
+- section: todas las paginas. Organiza el contenido en apartados tematicos.
+
+- footer: todas las paginas. Contiene el pie de pagina.
+
+- article: cultura, deportes, talleres, ponente1, ponente2, noticia1 y noticia2.
+
+  Agrupa cada actividad, perfil o noticia como contenido independiente.
+
+- aside: index.html. Presenta consejos para preparar la visita.
+
+- details: index.html e inscripcion.html. Crea bloques desplegables.
+
+- summary: index.html e inscripcion.html. Da titulo a esos bloques.
+
+- figure: index, multimedia, noticias, noticia1, noticia2 y talleres.Agrupa imágenes, recursos multimedia y esquemas.
+
+- figcaption: las mismas paginas que figure. Describe cada figura.
+
+- hgroup: talleres.html. Agrupa el titulo y el subtitulo de los laboratorios.
+
+- time: programa, cultura, deportes, talleres, multimedia, noticia1 y noticia2.
+  Identifica horarios y fechas de publicación.
+
+- meter: talleres.html. Representa la dificultad de los talleres (2 de 5).
+
+- ruby: ponente2 y talleres. Agrupa la sigla SOC con su pronunciación.
+
+- rt: ponente2 y talleres. Indica la pronunciación de la sigla.
+
+- rp: ponente2 y talleres. Delimita la anotacion si ruby no se admite.
+
+- wbr: contacto.html y talleres.html. Permite saltos de linea en textos largos.
+
+- datalist: inscripcion.html. Ofrece sugerencias de empresas.
+
+- mark: inscripcion.html. Destaca que algunos campos son obligatorios.
+
+- progress: inscripcion.html. Indica la etapa de inscripción (1 de 3).
+
+- output: inscripcion.html. Muestra el total de respuestas obligatorias (4).
+
+  progress y output son fijos; no se actualizan al rellenar el formulario.
+
+- video: multimedia.html. Reproduce el video educativo.
+
+- audio: multimedia.html. Reproduce el episodio del podcast Security Now.
+
+- source: multimedia.html. Indica la URL y el tipo de los archivos multimedia.
+
+- svg: multimedia.html. Dibuja un esquema.
+
+- embed: programa.html. Muestra el programa en PDF.
