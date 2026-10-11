@@ -1,3 +1,5 @@
+EJERCICIO 1
+-------------------------------------------------------------------------------------------------------------------------------------------
 Hemos definido un total de 136 reglas de estilo:
 - estilos.css: 71 reglas
 - index.html: 35 reglas
@@ -72,3 +74,22 @@ Se han utilizado 40 propiedades CSS diferentes:
 38. table-layout
 39. cursor
 40. opacity
+
+
+EJERCICIO 2
+-------------------------------------------------------------------------------------------------------------------
+Hemos creado 4 páginas independientes a partir de las páginas del Ejercicio 1:
+
+1. Página a 2 columnas (Programa):
+   - programa_flex.html -> con Flexbox (flexbox.css)
+   - programa_grid.html -> con CSS Grid (grid.css)
+
+2. Página a 3 columnas (Cultura):
+   - cultura_flex.html  -> con Flexbox (flexbox.css)
+   - cultura_grid.html  -> con CSS Grid (grid.css)
+
+En las dos variantes se ha sustituido por completo la maquetación clásica 
+basada en float / clear por:
+  - Flexbox: contenedor display:flex con flex-wrap para la distribución fluida.
+  - Grid: contenedor display:grid con grid-template-columns (2 y 3 columnas) 
+    y asignación de áreas/columnas completas (grid-column: 1 / -1) para header y footer.
