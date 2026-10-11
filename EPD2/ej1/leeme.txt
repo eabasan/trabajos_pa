@@ -1,0 +1,74 @@
+Hemos definido un total de 136 reglas de estilo:
+- estilos.css: 71 reglas
+- index.html: 35 reglas
+- login.html: 30 reglas
+
+Se han utilizado 14 pseudoclases diferentes:
+1.  :link          
+2.  :visited       
+3.  :hover         
+4.  :active        
+5.  :focus         
+6.  :first-child   
+7.  :last-child    
+8.  :not()         
+9.  :first-of-type 
+10. :nth-child()   
+11. :required      
+12. :disabled      
+13. :checked       
+14. :target        
+*Nota: También se hace uso del pseudoelemento ::marker para personalizar los marcadores de listas ordenadas y desordenadas.
+
+Se han utilizado 40 propiedades CSS diferentes:
+[Dimensiones, Modelo de Caja y Visualización]
+1.  width
+2.  max-width
+3.  height
+4.  box-sizing
+5.  box-shadow
+6.  display
+7.  vertical-align
+
+  [Márgenes y Espaciados]
+8.  margin
+9.  margin-top
+10. margin-bottom
+11. margin-left
+12. margin-right
+13. padding
+14. padding-top
+15. padding-bottom
+16. padding-left
+17. padding-right
+
+  [Flotación y Maquetación Clásica]
+18. float
+19. clear
+
+  [Tipografía y Alineación de Texto]
+20. font-family
+21. font-size
+22. font-weight
+23. font-style
+24. line-height
+25. text-align
+26. text-decoration
+27. color
+
+  [Fondos, Bordes y Contornos]
+28. background-color
+29. border
+30. border-top
+31. border-bottom
+32. border-left
+33. border-radius
+34. border-collapse
+35. outline
+
+  [Listas, Tablas e Interacción]
+36. list-style
+37. list-style-type
+38. table-layout
+39. cursor
+40. opacity

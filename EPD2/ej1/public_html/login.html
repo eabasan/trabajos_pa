@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="es">
+    <head>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #E9F1FA;
+                color: #333333;
+                line-height: 1.6;
+            }
+
+            #contenedor_principal {
+                width: 960px;
+                margin: 20px auto;
+                padding: 25px 35px;
+                background-color: #FFFFFF;
+                box-sizing: border-box;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+            }
+
+            header {
+                text-align: center;
+                border-bottom: 2px solid #213F99;
+                padding-bottom: 15px;
+            }
+
+            h1 {
+                color: #213F99;
+                margin-bottom: 5px;
+            }
+
+            h2 {
+                color: #213F99;
+                text-align: center;
+            }
+
+            #menu {
+                margin: 20px 0;
+                padding: 12px 0;
+                border-bottom: 1px solid #D9E2EC;
+            }
+
+            #menu ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+
+            #menu li {
+                display: inline-block;
+                margin: 3px 5px;
+            }
+
+            #menu a {
+                display: inline-block;
+                padding: 5px 7px;
+                color: #213F99;
+                text-decoration: none;
+                border-radius: 3px;
+            }
+
+            #menu a:link {
+                color: #213F99;
+            }
+
+            #menu a:visited {
+                color: #4B2384;
+            }
+
+            #menu a:hover {
+                background-color: #213F99;
+                color: #FFFFFF;
+            }
+
+            #menu a:active {
+                background-color: #D32F2F;
+                color: #FFFFFF;
+            }
+
+            #menu a:focus {
+                outline: 2px dashed #FFA000;
+            }
+
+            #contenido {
+                max-width: 550px;
+                margin: 25px auto;
+            }
+
+            form {
+                margin-top: 20px;
+            }
+
+            fieldset {
+                border: 1px solid #213F99;
+                border-radius: 5px;
+                padding: 20px;
+                background-color: #FAFCFE;
+            }
+
+            legend {
+                color: #213F99;
+                font-weight: bold;
+                padding: 0 8px;
+            }
+
+            label {
+                display: inline-block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            input[type="email"],
+            input[type="password"] {
+                width: 100%;
+                padding: 9px;
+                border: 1px solid #B0BEC5;
+                border-radius: 4px;
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            input:focus {
+                background-color: #E9F1FA;
+                outline: 2px solid #213F99;
+            }
+
+            input:required {
+                border-left: 4px solid #D32F2F;
+            }
+
+            input:disabled {
+                background-color: #ECEFF1;
+                cursor: not-allowed;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                padding: 8px 15px;
+                border: none;
+                border-radius: 4px;
+                color: #FFFFFF;
+                cursor: pointer;
+                margin-right: 8px;
+            }
+
+            input[type="submit"] {
+                background-color: #213F99;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #001F66;
+            }
+
+            input[type="reset"] {
+                background-color: #78909C;
+            }
+
+            input[type="reset"]:hover {
+                background-color: #546E7A;
+            }
+
+            input[type="submit"]:active,
+            input[type="reset"]:active {
+                opacity: 0.8;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 30px;
+                padding-top: 15px;
+                border-top: 1px solid #E0E0E0;
+                color: #666666;
+                font-size: 0.9em;
+            }
+
+            
+        </style>
+
+    </head>
+    <body>
+        <div id="contenedor_principal">
+            <header>
+                <h1>Feria de Empleo y Ponencias UPO</h1>
+            </header>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="programa.html">Programa</a></li>
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a href="ponentes.html">Ponentes</a></li>
+                    <li><a href="asociaciones.html">Asociaciones</a></li>
+                    <li><a href="multimedia.html">Multimedia</a></li>
+                    <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="login.html"><strong>Login</strong></a></li>
+                </ul>  
+            </nav>
+            <main id="contenido">
+                <section>
+                    <h2>Iniciar Sesi&oacute;n</h2>
+                    <form action="#">
+                        <fieldset>
+                            <legend>Acceso para Usuarios Registrados</legend>
+                            <p>
+                                <label for="email">Correo electr&oacute;nico:</label><br>
+                                <input type="email" id="email" name="email_control" autofocus required placeholder="ejemplo@upo.es">
+                            </p>
+                            <p>
+                                <label for="clave">Contrase&ntilde;a:</label><br>
+                                <input type="password" id="clave" name="pass_control" required minlength="6" placeholder="M&iacute;nimo 6 caracteres">
+                            </p>
+                            <p>
+                                <input type="submit" value="Entrar">
+                                <input type="reset" value="Limpiar">
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+            </main>
+            <footer>
+                <p>&copy; Universidad Pablo de Olavide 2026</p>
+            </footer>
+        </div>
+    </body>
+</html>
