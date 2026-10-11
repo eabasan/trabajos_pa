@@ -1,0 +1,70 @@
+RELACIÓN DE REGLAS, PSEUDOCLASES Y PROPIEDADES CSS (EPD02):
+- Número de reglas CSS creadas: 54 reglas (supera el mínimo de 50).
+  * 39 reglas en estilos.css.
+  * 15 reglas incrustadas entre index.html y login.html.
+
+- Número de pseudoclases distintas empleadas: 15 pseudoclases (mínimo 12).
+  1. :hover
+  2. :active
+  3. :focus
+  4. :visited
+  5. :first-child
+  6. :last-child
+  7. :nth-child(even)
+  8. :nth-child(odd)
+  9. :not()
+  10. :checked
+  11. :disabled
+  12. :required
+  13. :valid
+  14. :invalid
+  15. :focus-within
+
+- Número de propiedades/atributos CSS distintos utilizados: 38 propiedades.
+  (box-sizing, margin, padding, font-family, font-size, line-height, color,
+   background-color, background, width, max-width, min-height, height, border,
+   border-radius, border-top, border-bottom, border-left, border-right,
+   border-color, border-collapse, box-shadow, overflow, text-align, text-decoration,
+   letter-spacing, text-transform, font-style, font-weight, list-style,
+   display, clear, float, cursor, outline, transform, transition, content).
+
+ACTIVIDAD ADICIONAL (EJERCICIO 2 - FLEXBOX Y GRID):
+- Se han implementado 4 páginas adicionales transformando los esquemas de maquetación:
+  1. programa_flex.html: Diseño a 2 columnas estructurado con Flexbox (display: flex, flex: 0 0 250px en columna lateral y flex: 1 en columna central).
+  2. programa_grid.html: Diseño a 2 columnas estructurado con CSS Grid (display: grid, grid-template-columns: 260px 1fr, column-gap: 25px).
+  3. talleres_flex.html: Diseño a 3 columnas estructurado con Flexbox (display: flex, flex: 0 0 240px en laterales y flex: 1 en columna central).
+  4. talleres_grid.html: Diseño a 3 columnas estructurado con CSS Grid (display: grid, grid-template-columns: 240px 1fr 240px, column-gap: 20px).
+
+RELACIÓN DE ETIQUETAS HTML5 UTILIZADAS:
+- <header>, <nav>, <main>, <footer>: en todas las páginas para marcar las zonas fijas de la web.
+- <section> y <article>: en las secciones de contenido y fichas independientes (noticias, actividades, ponentes).
+- <aside>: en index.html para el aviso de aforo limitado del auditorio y para las columnas laterales.
+- <address>: en contacto.html para los datos de ubicación física, teléfono y sede de la UPO.
+
+- <mark>: en index.html para resaltar el nombre de la feria.
+- <ruby>, <rt>, <rp>: en index.html para poner la aclaración sobre las siglas "UPO".
+- <wbr>: en index.html y contacto.html para sugerir el corte en correos electrónicos largos.
+- <time>: en noticias.html, noticia1.html y noticia2.html para indicar la fecha exacta de publicación.
+
+- <figure> y <figcaption>: en index.html, asociaciones.html, contacto.html, multimedia.html, ponentes y noticias para acompañar las fotos con su pie.
+- <video>, <audio>, <track> y <source>: en multimedia.html para el vídeo promocional con subtítulos y el audio de ambientación.
+- <svg>: en index.html para dibujar el icono circular verde de "Inscripciones abiertas".
+- <math>: en talleres.html para representar la fórmula matemática en el taller de robótica.
+
+- <fieldset> y <legend>: en contacto.html, inscripcion.html y login.html para agrupar los bloques del formulario.
+- <progress> y <meter>: en inscripcion.html para mostrar el paso del registro y el porcentaje de aforo ocupado.
+- <datalist>: en inscripcion.html para sugerir opciones de cómo conocieron el evento.
+- <output>: en inscripcion.html para mostrar el número seleccionado en la barra de rango.
+- <select>, <option> y <textarea>: en contacto.html e inscripcion.html para elegir titulación/motivo y escribir mensajes.
+- <details> y <summary>: en contacto.html para el desplegable de preguntas frecuentes.
+
+- <table>, <caption>, <thead>, <tbody>, <tr>, <th>, <td>: en programa.html (con celdas combinadas colspan y rowspan), noticia1.html y noticia2.html para estructurar horarios y datos.
+
+NOTA SOBRE CODIFICACIÓN:
+- Para evitar problemas de codificación, los caracteres especiales (tildes, eñes, aperturas de interrogación y comillas) se han codificado mediante entidades HTML estándar (&aacute;, &ntilde;, &iquest;, etc.).
+
+FUENTES DE LOS ARTÍCULOS DE NOTICIAS:
+- Noticia 1: Extraída y adaptada de:
+  https://tutecnologia.com/como-funciona-la-inteligencia-artificial-sin-palabras-complicadas/
+- Noticia 2: Extraída y adaptada de:
+  https://www.santander.com/es/stories/ninos-y-adolescentes-los-protagonistas-de-nuestro-nuevo-espacio-de-seguridad-online

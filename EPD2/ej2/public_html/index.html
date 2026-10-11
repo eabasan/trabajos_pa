@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Feria de Empleo - Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            color: #2d3436;
+        }
+        /* Diseño fijo en píxeles */
+        #contenedor-fijo {
+            width: 1024px;
+            margin: 25px auto;
+            background-color: #ffffff;
+            border: 1px solid #ced6e0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3799, #0984e3);
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 6px;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #dff9fb;
+            font-style: italic;
+        }
+        /* Menú superior */
+        nav.menu-superior {
+            background-color: #2f3640;
+            border-bottom: 3px solid #f39c12;
+        }
+        nav.menu-superior ul {
+            list-style: none;
+            text-align: center;
+        }
+        nav.menu-superior ul li {
+            display: inline-block;
+        }
+        nav.menu-superior ul li a {
+            display: block;
+            padding: 12px 18px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+        nav.menu-superior ul li a:hover {
+            background-color: #0984e3;
+        }
+        /* Distribución interior con float */
+        .fila-principal::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        main {
+            float: left;
+            width: 720px;
+            padding: 30px;
+        }
+        aside {
+            float: right;
+            width: 304px;
+            background-color: #f8f9fa;
+            border-left: 1px solid #dfe4ea;
+            padding: 25px 20px;
+            min-height: 500px;
+        }
+        main h2, aside h3 {
+            color: #1e3799;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #74b9ff;
+            padding-bottom: 6px;
+        }
+        main p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        ol li {
+            margin-bottom: 8px;
+        }
+        ol ul {
+            margin-top: 6px;
+            margin-left: 20px;
+        }
+        mark {
+            background-color: #ffeaa7;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+        figure img {
+            border: 1px solid #ced6e0;
+            border-radius: 6px;
+            padding: 4px;
+            background-color: #fff;
+        }
+        figcaption {
+            font-size: 0.85rem;
+            color: #636e72;
+            margin-top: 5px;
+        }
+        /* Menú inferior y footer */
+        footer {
+            clear: both;
+            background-color: #2f3640;
+            color: #dcdde1;
+            text-align: center;
+            padding: 20px;
+            border-top: 3px solid #0984e3;
+        }
+        footer nav ul {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+        footer nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        footer nav ul li a {
+            color: #74b9ff;
+            text-decoration: none;
+        }
+        footer nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor-fijo">
+        <header>
+            <h1>Feria de Empleo y Ponencias UPO</h1>
+            <p>Encuentro anual de salidas profesionales y tecnolog&iacute;a 2026</p>
+        </header>
+
+        <nav class="menu-superior">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="ponentes.html">Ponentes</a></li>
+                <li><a href="asociaciones.html">Asociaciones</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>  
+        </nav>
+
+        <div class="fila-principal">
+            <main>
+                <p>
+                    <strong>Estado:</strong> 
+                    <svg width="12" height="12">
+                        <circle cx="6" cy="6" r="5" fill="green" />
+                    </svg> 
+                    Inscripciones abiertas
+                </p>
+                <section>
+                    <h2>Sobre el evento</h2>
+                    <p>Bienvenidos a la <mark>Feria de Empleo y Ponencias de la UPO</mark>. Un espacio donde podr&aacute;s conectar con empresas y profesionales a trav&eacute;s de ponencias, oportunidades laborales y experiencias del sector.</p>
+                    <figure>
+                        <img src="https://www.upo.es/cms1/export/sites/upo/infraestructuras/planimetria/documentacion_grafica_edificios/edificios/Edificio_31/Imagenes_Edificio_31/Edificio_31.jpg" alt="Paraninfo de la universidad" width="500">
+                        <figcaption>Paraninfo de la universidad, sede principal del evento.</figcaption>
+                    </figure>
+                </section>
+                                
+                <section>
+                    <h2>&iquest;Por qu&eacute; asistir?</h2>
+                    <ol>
+                        <li>
+                            Entrevistas de trabajo
+                            <ul>
+                                <li>Contacto directo con departamentos de RRHH</li>
+                                <li>Posibilidad de entrega de CV en mano</li>
+                            </ul>
+                        </li>
+                        <li>Charlas exclusivas</li>
+                        <li>Contactos en el sector</li>
+                        <li>Talleres did&aacute;cticos</li>
+                    </ol>
+                </section>
+
+                <p>Organizado en la <ruby>UPO<rp>(</rp><rt>Universidad Pablo de Olavide</rt><rp>)</rp></ruby>.</p>
+                <p>Contacto de dudas: coordinacion.<wbr>feriaempleo@upo.es</p>
+            </main>
+            
+            <aside>
+                <h3>Aviso importante</h3>
+                <p>El aforo para las ponencias del auditorio es limitado. Se recomienda llegar con 15 minutos de antelaci&oacute;n.</p>
+                <br>
+                <h3>Enlaces R&aacute;pidos</h3>
+                <ul>
+                    <li><a href="inscripcion.html">Formulario de inscripci&oacute;n</a></li>
+                    <li><a href="noticias.html">Ver &uacute;ltimas noticias</a></li>
+                    <li><a href="contacto.html">Atenci&oacute;n al alumno</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="contacto.html">Contacto y Ubicaci&oacute;n</a></li>
+                    <li><a href="login.html">Portal de Usuario</a></li>
+                    <li><a href="inscripcion.html">Formulario de Registro</a></li>
+                </ul>
+            </nav>
+            <p>Pablo de Olavide 2026 &middot; Grado en Ingenier&iacute;a Inform&aacute;tica</p>
+        </footer>
+    </div>
+</body>
+</html>

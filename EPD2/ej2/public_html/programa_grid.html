@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Programa (Grid) - Feria de Empleo UPO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Sobrescritura de maquetación clásica para usar CSS Grid */
+        .fila-contenido {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            column-gap: 25px;
+            padding: 20px;
+        }
+        .fila-contenido::after {
+            display: none; /* Se anula el clearfix */
+        }
+        aside.columna-izq {
+            float: none;
+            width: 100%;
+            min-height: auto;
+            border-radius: 6px;
+        }
+        main.columna-central-padre {
+            float: none;
+            width: 100%;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-web">
+        <header class="cabecera-principal">
+            <h1>Feria de Empleo y Ponencias UPO</h1>
+            <p>Maquetaci&oacute;n a 2 Columnas mediante CSS Grid (Ejercicio 2)</p>
+        </header>
+
+        <nav class="menu-superior">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programa.html">Programa (Float)</a></li>
+                <li><a href="programa_flex.html">Programa (Flexbox)</a></li>
+                <li><a href="programa_grid.html">Programa (Grid)</a></li>
+                <li><a href="talleres_flex.html">Talleres (Flexbox)</a></li>
+                <li><a href="talleres_grid.html">Talleres (Grid)</a></li>
+            </ul>
+        </nav>
+
+        <div class="fila-contenido">
+            <aside class="columna-izq menu-lateral">
+                <h3>Secciones Padre</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="programa.html">Programa</a></li>
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a href="ponentes.html">Ponentes</a></li>
+                    <li><a href="asociaciones.html">Asociaciones</a></li>
+                    <li><a href="multimedia.html">Multimedia</a></li>
+                    <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+
+                <h3>Secciones Hijas</h3>
+                <ul class="submenu-hijas">
+                    <li><a href="talleres.html">Talleres</a></li>
+                    <li><a href="deportes.html">Deportes</a></li>
+                    <li><a href="cultura.html">Cultura</a></li>
+                    <li><a href="ponente1.html">Perfil Ana G&oacute;mez</a></li>
+                    <li><a href="ponente2.html">Perfil Luis Rodr&iacute;guez</a></li>
+                    <li><a href="noticia1.html">Noticia 1: IA</a></li>
+                    <li><a href="noticia2.html">Noticia 2: Ciberseguridad</a></li>
+                </ul>
+            </aside>
+
+            <main class="columna-central-padre">
+                <section>
+                    <h2>Horarios de Ponencias y Talleres (Layout: CSS Grid)</h2>
+                    <table>
+                        <caption>Cronograma general de las jornadas por espacios</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Aula 1</th>
+                                <th scope="col">Aula 2</th>
+                                <th scope="col">Paraninfo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">09:00 - 10:00</th>
+                                <td colspan="3">Apertura del Evento y acreditaciones</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10:00 - 11:00</th>
+                                <td rowspan="2">Taller de Git y GitHub</td>
+                                <td>Charla de Ciberseguridad</td>
+                                <td>Conferencia sobre IA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">11:00 - 12:00</th>
+                                <td>Taller de Rob&oacute;tica</td>
+                                <td>Conferencia Big Data</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12:00 - 13:00</th>
+                                <td>Taller de Visi&oacute;n Artificial</td>
+                                <td colspan="2" rowspan="2">Feria sobre Inteligencia de Negocio y Networking</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">13:00 - 14:00</th>
+                                <td>Cierre del Evento</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+
+        <footer class="pie-principal">
+            <p>Pablo de Olavide 2026 &middot; Maquetaci&oacute;n con CSS Grid &middot; <a href="login.html">Login</a></p>
+        </footer>
+    </div>
+</body>
+</html>

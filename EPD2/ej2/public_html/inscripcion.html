@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscripci&oacute;n - Feria de Empleo UPO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor-web">
+        <header class="cabecera-principal">
+            <h1>Feria de Empleo y Ponencias UPO</h1>
+            <p>Formulario de Registro Oficial</p>
+        </header>
+
+        <nav class="menu-superior">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="ponentes.html">Ponentes</a></li>
+                <li><a href="asociaciones.html">Asociaciones</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="fila-contenido">
+            <aside class="columna-izq menu-lateral">
+                <h3>Secciones Padre</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="programa.html">Programa</a></li>
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a href="ponentes.html">Ponentes</a></li>
+                    <li><a href="asociaciones.html">Asociaciones</a></li>
+                    <li><a href="multimedia.html">Multimedia</a></li>
+                    <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+
+                <h3>Secciones Hijas</h3>
+                <ul class="submenu-hijas">
+                    <li><a href="talleres.html">Talleres</a></li>
+                    <li><a href="deportes.html">Deportes</a></li>
+                    <li><a href="cultura.html">Cultura</a></li>
+                    <li><a href="ponente1.html">Perfil Ana G&oacute;mez</a></li>
+                    <li><a href="ponente2.html">Perfil Luis Rodr&iacute;guez</a></li>
+                    <li><a href="noticia1.html">Noticia 1: IA</a></li>
+                    <li><a href="noticia2.html">Noticia 2: Ciberseguridad</a></li>
+                </ul>
+            </aside>
+
+            <main class="columna-central-padre">
+                <section>
+                    <h2>Estado del Aforo</h2>
+                    <p>Progreso del registro: <progress value="1" max="2">Paso 1 de 2</progress></p>
+                    <p>Plazas generales ocupadas: <meter min="0" max="100" value="70">70%</meter></p>
+                </section>
+
+                <form action="#" oninput="range_control_value.value = range_control.valueAsNumber">
+                    <fieldset>
+                        <legend>Datos Personales del Estudiante</legend>
+                        
+                        <p>
+                            <label for="nombre">Nombre completo:</label><br>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellidos">
+                        </p>
+
+                        <p>
+                            <label for="correo">Correo electr&oacute;nico institucional:</label><br>
+                            <input type="email" id="correo" name="correo" required placeholder="usuario@upo.es">
+                        </p>
+
+                        <p>
+                            <label for="tel">Tel&eacute;fono de contacto:</label><br>
+                            <input type="tel" id="tel" name="tel" required placeholder="600123456">
+                        </p>
+
+                        <p>
+                            <label for="fecha_nacimiento">Fecha de nacimiento:</label><br>
+                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                        </p>
+
+                        <p>
+                            <label for="grados">Titulaci&oacute;n cursada:</label><br>
+                            <select name="grados" id="grados" required>
+                                <option value="">Selecciona tu grado o m&aacute;ster</option>
+                                <option value="grado_si">Ingenier&iacute;a Inform&aacute;tica - Menci&oacute;n Sistemas de Informaci&oacute;n</option>
+                                <option value="grado_cd">Ingenier&iacute;a Inform&aacute;tica - Menci&oacute;n Ciencia de Datos</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="canal">&iquest;C&oacute;mo te enteraste del evento?</label><br>
+                            <input list="canales" id="canal" name="canal" placeholder="Selecciona o escribe una opci&oacute;n...">
+                            <datalist id="canales">
+                                <option value="Redes Sociales UPO">
+                                <option value="Correo corporativo">
+                                <option value="Carteler&iacute;a en el campus">
+                                <option value="Compa&ntilde;eros de clase">
+                            </datalist>
+                        </p>
+
+                        <p>
+                            <label for="range_control">Nivel de experiencia previa (0 a 10):</label><br>
+                            <input type="range" id="range_control" name="range_control" min="0" max="10" value="0"> 
+                            <output for="range_control" name="range_control_value">0</output>
+                        </p>
+
+                        <p>
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            <label for="terminos">He le&iacute;do y acepto las condiciones de inscripci&oacute;n</label>
+                        </p>
+
+                        <p>
+                            <input type="submit" value="Confirmar Inscripci&oacute;n">
+                            <input type="reset" value="Borrar Formulario">
+                        </p>
+                    </fieldset>
+                </form>
+            </main>
+        </div>
+
+        <footer class="pie-principal">
+            <p>Pablo de Olavide 2026 &middot; Grado en Ingenier&iacute;a Inform&aacute;tica &middot; <a href="login.html">Acceso Administraci&oacute;n</a></p>
+        </footer>
+    </div>
+</body>
+</html>

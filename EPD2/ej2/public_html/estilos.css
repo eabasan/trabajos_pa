@@ -1,0 +1,508 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y MAQUETACIÓN CLÁSICA (FLOAT + BORDER-BOX) - EPD02
+   ========================================================================== */
+
+/* 1. Reset básico y modelo de cajas */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Cuerpo y fondo principal */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #eef2f7;
+}
+
+/* 3. Contenedor principal centrado */
+.contenedor-web {
+    width: 94%;
+    max-width: 1240px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+/* 4. Cabecera */
+header.cabecera-principal {
+    background: linear-gradient(135deg, #1e3799, #0984e3);
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 4px solid #f39c12;
+}
+
+/* 5. Títulos en cabecera */
+header.cabecera-principal h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+header.cabecera-principal p {
+    font-size: 1.05rem;
+    color: #dff9fb;
+    font-style: italic;
+}
+
+/* 6. Barra horizontal de navegación superior */
+nav.menu-superior {
+    background-color: #2f3640;
+    border-bottom: 2px solid #718093;
+}
+
+nav.menu-superior ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav.menu-superior ul li {
+    display: inline-block;
+}
+
+nav.menu-superior ul li a {
+    display: block;
+    padding: 12px 16px;
+    color: #f5f6fa;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+}
+
+/* 7. Limpieza de flotantes (Clearfix) */
+.fila-contenido::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ==========================================================================
+   MAQUETACIÓN DE COLUMNAS CON FLOAT (REGLAS 2 Y 3 COLUMNAS)
+   ========================================================================== */
+
+/* 8. Columna izquierda: Menú lateral */
+aside.columna-izq {
+    float: left;
+    width: 25%;
+    padding: 20px 15px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #e1e8ed;
+    min-height: 600px;
+}
+
+/* 9. Columna central: Páginas Padre (2 columnas: 75%) */
+main.columna-central-padre {
+    float: left;
+    width: 75%;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+/* 10. Columna central: Páginas Hijas (3 columnas: 52%) */
+main.columna-central-hija {
+    float: left;
+    width: 52%;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+/* 11. Columna derecha: Información extra en Hijas (23%) */
+aside.columna-der {
+    float: right;
+    width: 23%;
+    padding: 20px 15px;
+    background-color: #fcfcfc;
+    border-left: 1px solid #e1e8ed;
+    min-height: 600px;
+}
+
+/* ==========================================================================
+   MENÚ LATERAL (PADRES E HIJAS)
+   ========================================================================== */
+
+/* 12. Títulos de secciones en el menú lateral */
+.columna-izq h2, .columna-izq h3, .columna-der h2, .columna-der h3 {
+    font-size: 1.15rem;
+    color: #1e3799;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+}
+
+/* 13. Listas del menú lateral */
+.menu-lateral ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.menu-lateral ul li {
+    margin-bottom: 6px;
+}
+
+.menu-lateral ul li a {
+    display: block;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    color: #34495e;
+    text-decoration: none;
+    border-radius: 4px;
+    border-left: 4px solid #bdc3c7;
+    font-size: 0.92rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+
+/* 14. Submenús o listas hijas dentro del lateral */
+.menu-lateral ul.submenu-hijas {
+    padding-left: 10px;
+}
+
+.menu-lateral ul.submenu-hijas li a {
+    border-left: 4px solid #f39c12;
+    background-color: #fffaf0;
+    font-size: 0.88rem;
+}
+
+/* ==========================================================================
+   CONTENIDO PRINCIPAL Y TIPOGRAFÍA
+   ========================================================================== */
+
+/* 15. Encabezados de contenido */
+main h2 {
+    font-size: 1.7rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dfe6e9;
+    padding-bottom: 8px;
+}
+
+main h3 {
+    font-size: 1.3rem;
+    color: #34495e;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+/* 16. Párrafos */
+main p {
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+/* 17. Artículos / Tarjetas de contenido */
+article.tarjeta-info, article.ponente, main article {
+    background-color: #fdfdfd;
+    border: 1px solid #eaedf1;
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+/* 18. Citas en bloque */
+blockquote {
+    border-left: 5px solid #0984e3;
+    padding: 10px 18px;
+    margin: 15px 0;
+    background-color: #f1f7fe;
+    font-style: italic;
+    color: #4b6584;
+}
+
+/* 19. Resaltados y rubí */
+mark {
+    background-color: #ffeaa7;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #2d3436;
+}
+
+ruby {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+/* 20. Figuras e imágenes */
+figure {
+    text-align: center;
+    margin: 18px 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #dcdde1;
+    padding: 4px;
+    background-color: #ffffff;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   TABLAS PERSONALIZADAS
+   ========================================================================== */
+
+/* 21. Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+    border: 1px solid #bdc3c7;
+    font-size: 0.95rem;
+}
+
+/* 22. Cabeceras y celdas */
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #dcdde1;
+}
+
+th {
+    background-color: #2f3640;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+caption {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    text-align: left;
+}
+
+/* ==========================================================================
+   FORMULARIOS PERSONALIZADOS
+   ========================================================================== */
+
+/* 23. Contenedor de formulario */
+fieldset {
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fbfcfe;
+}
+
+legend {
+    font-weight: bold;
+    color: #1e3799;
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+label {
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+/* 24. Campos de entrada de texto */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 4px;
+    margin-bottom: 14px;
+    border: 1px solid #ced6e0;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    color: #2f3542;
+    transition: all 0.25s ease;
+}
+
+/* 25. Botones de envío y borrado */
+input[type="submit"], button.btn-principal {
+    background-color: #27ae60;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin-right: 10px;
+    transition: background-color 0.2s ease;
+}
+
+input[type="reset"] {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+/* ==========================================================================
+   ELEMENTOS MULTIMEDIA, AUDIO, VÍDEO Y DETALLES
+   ========================================================================== */
+
+/* 26. Multimedia */
+video, audio {
+    width: 100%;
+    max-width: 550px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 6px;
+}
+
+/* 27. Detalles y resumen */
+details {
+    background-color: #f1f2f6;
+    border: 1px solid #ced6e0;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 12px 0;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #1e3799;
+}
+
+/* 28. Pie de página */
+footer.pie-principal {
+    clear: both;
+    background-color: #2f3640;
+    color: #dcdde1;
+    text-align: center;
+    padding: 22px 15px;
+    border-top: 4px solid #0984e3;
+    font-size: 0.95rem;
+}
+
+footer.pie-principal a {
+    color: #74b9ff;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   USO DE AL MENOS 12 PSEUDOCLASES DISTINTAS
+   ========================================================================== */
+
+/* Pseudoclase 1: :hover */
+nav.menu-superior ul li a:hover,
+.menu-lateral ul li a:hover {
+    background-color: #0984e3;
+    color: #ffffff;
+    border-left-color: #f39c12;
+    padding-left: 15px;
+}
+
+/* Pseudoclase 2: :active */
+nav.menu-superior ul li a:active,
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Pseudoclase 3: :focus */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0984e3;
+    outline: none;
+    box-shadow: 0 0 8px rgba(9, 132, 227, 0.4);
+    background-color: #fdfefe;
+}
+
+/* Pseudoclase 4: :visited */
+footer.pie-principal a:visited {
+    color: #a29bfe;
+}
+
+/* Pseudoclase 5: :first-child */
+.menu-lateral ul li:first-child a {
+    border-top: 2px solid #0984e3;
+}
+
+/* Pseudoclase 6: :last-child */
+.menu-lateral ul li:last-child a {
+    border-bottom: 2px solid #0984e3;
+}
+
+/* Pseudoclase 7: :nth-child(even) y :nth-child(odd) */
+table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Pseudoclase 8: :not() */
+ul.lista-general li:not(:last-child) {
+    border-bottom: 1px dashed #dcdde1;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+}
+
+/* Pseudoclase 9: :checked */
+input[type="checkbox"]:checked + label {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Pseudoclase 10: :disabled */
+input:disabled, button:disabled {
+    background-color: #dcdde1;
+    color: #7f8c8d;
+    cursor: not-allowed;
+    border-color: #bdc3c7;
+}
+
+/* Pseudoclase 11: :required */
+input:required, select:required, textarea:required {
+    border-left: 4px solid #e74c3c;
+}
+
+/* Pseudoclase 12: :valid */
+input:valid {
+    border-left-color: #2ecc71;
+}
+
+/* Pseudoclase 13: :invalid */
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #e74c3c;
+    background-color: #fff0f0;
+}
+
+/* Pseudoclase 14: :focus-within */
+fieldset:focus-within {
+    border-color: #0984e3;
+    background-color: #f7faff;
+}
+
+/* Pseudoclase 15: :only-child */
+figure figcaption:only-child {
+    font-weight: bold;
+}

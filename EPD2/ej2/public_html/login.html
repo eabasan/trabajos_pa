@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Feria de Empleo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2c3e50;
+            color: #333333;
+        }
+        /* Contenedor con ancho fijo en píxeles */
+        #login-box {
+            width: 480px;
+            margin: 80px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            overflow: hidden;
+            border: 1px solid #bdc3c7;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3799, #0984e3);
+            color: #ffffff;
+            padding: 24px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 1.6rem;
+        }
+        main {
+            padding: 30px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #1e3799;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        fieldset {
+            border: 1px solid #dcdde1;
+            border-radius: 6px;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        legend {
+            font-weight: 600;
+            color: #2f3640;
+            padding: 0 8px;
+        }
+        label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #2f3542;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 4px;
+            margin-bottom: 16px;
+            border: 1px solid #ced6e0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #0984e3;
+            box-shadow: 0 0 6px rgba(9, 132, 227, 0.4);
+        }
+        .botones {
+            text-align: center;
+            margin-top: 10px;
+        }
+        input[type="submit"] {
+            background-color: #27ae60;
+            color: #ffffff;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #219150;
+        }
+        input[type="reset"] {
+            background-color: #e74c3c;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        input[type="reset"]:hover {
+            background-color: #c0392b;
+        }
+        .enlace-volver {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .enlace-volver a {
+            color: #0984e3;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .enlace-volver a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #f1f2f6;
+            text-align: center;
+            padding: 12px;
+            border-top: 1px solid #e4e7ea;
+            font-size: 0.85rem;
+            color: #747d8c;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-box">
+        <header>
+            <h1>Feria de Empleo UPO</h1>
+        </header>
+        <main>
+            <h2>Acceso de Usuario</h2>
+            <form action="#">
+                <fieldset>
+                    <legend>Credenciales de Registro</legend>
+                    <p>
+                        <label for="email">Correo electr&oacute;nico:</label><br>
+                        <input type="email" id="email" name="email_control" autofocus required placeholder="ejemplo@upo.es">
+                    </p>
+                    <p>
+                        <label for="clave">Contrase&ntilde;a:</label><br>
+                        <input type="password" id="clave" name="pass_control" required minlength="6" placeholder="M&iacute;nimo 6 caracteres">
+                    </p>
+                    <div class="botones">
+                        <input type="submit" value="Entrar">
+                        <input type="reset" value="Limpiar">
+                    </div>
+                </fieldset>
+            </form>
+            <div class="enlace-volver">
+                <a href="index.html">&larr; Volver al Inicio</a>
+            </div>
+        </main>
+        <footer>
+            <p>Pablo de Olavide 2026 &middot; Seguridad de Acceso</p>
+        </footer>
+    </div>
+</body>
+</html>
