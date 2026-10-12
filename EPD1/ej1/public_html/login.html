@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="es">
+    <head>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                width: 1000px;
+                margin: 20px auto;
+                background-color: #f2f2f2;
+                color: #222222;
+                font-family: Arial, sans-serif;
+            }
+
+            header {
+                padding: 20px;
+                background-color: #24476b;
+                color: white;
+            }
+
+            header h1 {
+                margin: 0;
+            }
+
+            nav.menu {
+                padding: 10px;
+                background-color: #d9e5f0;
+            }
+
+            nav.menu ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+
+            nav.menu li {
+                display: inline;
+                margin-right: 12px;
+            }
+
+            nav.menu a {
+                color: #173653;
+                text-decoration: none;
+            }
+
+            nav.menu a:hover {
+                color: #c04b20;
+                text-decoration: underline;
+            }
+
+            main {
+                width: 700px;
+                margin: 25px auto;
+                padding: 25px;
+                background-color: white;
+            }
+
+            main h2 {
+                color: #24476b;
+                text-align: center;
+            }
+
+            fieldset {
+                padding: 20px;
+                border: 2px solid #9aafc2;
+            }
+
+            legend {
+                padding: 5px;
+                color: #24476b;
+                font-weight: bold;
+            }
+
+            label {
+                font-weight: bold;
+            }
+
+            input[type="email"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #888888;
+            }
+
+            input:focus {
+                background-color: #f0f6ff;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                padding: 8px 15px;
+                border: 0;
+                background-color: #24476b;
+                color: white;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover,
+            input[type="reset"]:hover {
+                background-color: #c04b20;
+            }
+
+            footer {
+                padding: 12px;
+                background-color: #24476b;
+                color: white;
+                text-align: center;
+            }
+            input:required {
+                border-left: 4px solid #24476b;
+            }
+            input:invalid {
+                border-color: #bd5555;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Feria de Empleo y Ponencias UPO</h1>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="ponentes.html">Ponentes</a></li>
+                <li><a href="asociaciones.html">Asociaciones</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>  
+        </nav>
+        <main>
+            <section>
+                <h2>Iniciar Sesi&oacute;n</h2>
+                <form action="#">
+                    <fieldset>
+                        <legend>Acceso para Usuarios Registrados</legend>
+                        <p>
+                            <label for="email">Correo electr&oacute;nico:</label><br>
+                            <input type="email" id="email" name="email_control" autofocus required placeholder="ejemplo@upo.es">
+                        </p>
+                        <p>
+                            <label for="clave">Contrase&ntilde;a:</label><br>
+                            <input type="password" id="clave" name="pass_control" required minlength="6" placeholder="M&iacute;nimo 6 caracteres">
+                        </p>
+                        <p>
+                            <input type="submit" value="Entrar">
+                            <input type="reset" value="Limpiar">
+                        </p>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>Pablo de Olavide 2026</p>
+        </footer>
+    </body>
+</html>

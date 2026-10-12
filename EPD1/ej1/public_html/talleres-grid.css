@@ -1,0 +1,39 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Oct 12, 2026, 2:49:11 AM
+    Author     : ziada
+*/
+body {
+    display: grid;
+    grid-template-columns: 210px 500px 250px;
+    column-gap: 15px;
+}
+
+body > header,
+body > footer {
+    grid-column: 1 / -1;
+}
+
+nav.menu {
+    float: none;
+    margin-right: 0;
+    grid-column: 1;
+}
+
+main {
+    float: none;
+    margin-right: 0;
+    grid-column: 2;
+}
+
+aside.columna-noticias {
+    float: none;
+    grid-column: 3;
+}
+
+footer {
+    clear: none;
+}

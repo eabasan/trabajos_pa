@@ -3,10 +3,7 @@
     <type>org.netbeans.modules.web.clientproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/clientside-project/1">
-            <name>EPD1</name>
+            <name>ej1</name>
         </data>
-        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
-            <word>ç</word>
-        </spellchecker-wordlist>
     </configuration>
 </project>

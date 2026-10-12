@@ -1,0 +1,32 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Oct 12, 2026, 2:48:41 AM
+    Author     : ziada
+*/
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body > header,
+body > footer {
+    flex: 0 0 100%;
+}
+
+nav.menu {
+    float: none;
+    flex: 0 0 210px;
+}
+
+main {
+    float: none;
+    flex: 0 0 500px;
+}
+
+aside.columna-noticias {
+    float: none;
+    flex: 0 0 250px;
+}

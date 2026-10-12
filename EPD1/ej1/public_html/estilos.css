@@ -1,0 +1,279 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/*
+    Created on : Oct 11, 2026, 7:07:20 PM
+    Author     : ziada
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 1000px;
+    margin: 20px auto;
+    background-color: #f2f2f2;
+    color: #222222;
+    font-family: Arial, sans-serif;
+}
+
+body > header {
+    padding: 20px;
+    background-color: #24476b;
+    color: white;
+}
+
+body > header h1 {
+    margin: 0;
+}
+
+nav.menu {
+    float: left;
+    width: 230px;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #d9e5f0;
+}
+
+nav.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav.menu li {
+    margin-bottom: 8px;
+}
+
+nav.menu a {
+    color: #173653;
+    text-decoration: none;
+}
+
+nav.menu a:visited {
+    color: #674080;
+}
+
+nav.menu li:first-child {
+    font-weight: bold;
+}
+
+nav.menu li:last-child {
+    margin-bottom: 0;
+}
+
+nav.menu li:not(:last-child) {
+    border-bottom: 1px solid #9aafc2;
+}
+
+nav.menu a:hover,
+nav.menu a:focus {
+    color: #c04b20;
+    text-decoration: underline;
+}
+
+nav.menu a:active {
+    color: #a33212;
+    background-color: #ffe58a;
+}
+
+nav.menu ul ul {
+    margin: 5px 0 8px 8px;
+    padding-left: 10px;
+    border-left: 2px solid #9aafc2;
+}
+
+main {
+    float: right;
+    width: 750px;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: white;
+}
+
+main h2 {
+    color: #24476b;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+main article:first-of-type {
+    border-top: 2px solid #24476b;
+}
+
+main article:last-of-type {
+    border-bottom: 2px solid #24476b;
+}
+
+main table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+main caption {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+main th,
+main td {
+    padding: 8px;
+    border: 1px solid #777777;
+    text-align: left;
+}
+
+main th {
+    background-color: #d9e5f0;
+}
+
+main tbody tr:nth-child(even) {
+    background-color: #f0f6ff;
+}
+
+
+.pagina-hija nav.menu {
+    width: 210px;
+    margin-right: 15px;
+    border: 1px solid #cbd5e1;
+}
+
+.pagina-hija nav.menu a {
+    display: block;
+    padding: 5px;
+}
+
+.pagina-hija main {
+    float: left;
+    width: 500px;
+    margin-right: 15px;
+}
+
+.pagina-hija .columna-noticias {
+    float: right;
+    width: 250px;
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    background-color: white;
+}
+
+.pagina-hija .columna-noticias h2 {
+    margin-top: 0;
+    color: #24476b;
+}
+
+.pagina-hija .columna-noticias li {
+    margin-bottom: 8px;
+}
+
+.pagina-hija .columna-noticias a {
+    color: #173653;
+}
+
+footer {
+    clear: both;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #24476b;
+    color: white;
+    text-align: center;
+}
+
+main fieldset {
+    padding: 20px;
+    border: 2px solid #9aafc2;
+}
+
+main legend {
+    padding: 5px;
+    color: #24476b;
+    font-weight: bold;
+}
+
+main label {
+    font-weight: bold;
+}
+
+main input,
+main select,
+main textarea {
+    padding: 8px;
+    border: 1px solid #888888;
+    font-family: Arial, sans-serif;
+    background-color: #f0f6ff;
+    color: #222222;
+}
+
+main textarea {
+    max-width: 100%;
+}
+
+main input[type="submit"],
+main input[type="reset"] {
+    background-color: #24476b;
+    color: white;
+    cursor: pointer;
+}
+
+main input[type="submit"]:hover,
+main input[type="reset"]:hover {
+    background-color: #c04b20;
+}
+
+main figure {
+    margin: 15px 0;
+}
+
+main figcaption {
+    margin-top: 5px;
+    color: #24476b;
+    font-size: 14px;
+}
+
+main details {
+    padding: 12px;
+    border: 1px solid #9aafc2;
+    background-color: #f0f6ff;
+}
+
+main summary {
+    color: #24476b;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main audio,
+main video {
+    max-width: 100%;
+    margin: 10px 0;
+    border: 2px solid #9aafc2;
+}
+
+main hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #9aafc2;
+}
+
+main address {
+    padding: 12px;
+    background-color: #f0f6ff;
+    font-style: normal;
+}
+
+main progress,
+main meter {
+    width: 200px;
+    height: 20px;
+}
+
+main output {
+    padding: 5px;
+    background-color: #d9e5f0;
+    color: #24476b;
+}
