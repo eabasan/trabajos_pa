@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <title>Evento Universitario</title>
-</head>
-<body>
-    <header>
-        <h1>Esto es el evento UPO 26-27</h1>
-        <nav>
-            <h4>
-                Navega r&aacute;pidamente
-            </h4>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="login.html">Inicio de sesi&oacute;n</a></li>
-                <li><a href="actividades.html">Actividades</a></li>
-                <li><a href="ponentes.html">Ponentes</a></li>
-                <li><a href="asociaciones.html">Asociaciones</a></li>
-                <li><a href="multimedia.html">Multimedia</a></li>
-                <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <h2>Programa oficial del evento</h2>
-        <p>Consulta horarios de ponencias y actividades</p>
-        
-        <table border="2">
-            <thead>
-                <tr>
-                    <th>Hora</th>
-                    <th>Lunes(D&iacute;a 1)</th>
-                    <th>Martes(D&iacute;a 2)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><time>9:00</time>-<time>11:00</time></td>
-                    <td colspan="2">PRESENTACI&Oacute;N</td>
-                </tr>
-                <tr>
-                    <td><time>11:00</time>-<time>12:30</time></td>
-                    <td>PONENTE: IA</td>
-                    <td>PONENTE: Entrevistas de exito</td>
-                </tr>
-                <tr>
-                    <td><time>12:30</time>-<time>14:00</time></td>
-                    <td>ACTIVIDADES</td>
-                    <td>ACTIVIDADES</td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
-    
-    <footer>
-        <p>Organizaci&oacute;n del evento de ponencias y empleo</p>
-    </footer>
-</body>
+    <head>
+        <link rel="stylesheet" href="padrescss.css">
+        <title>Evento Universitario</title>
+    </head>
+    <body>
+        <header>
+            <h1>Esto es el evento UPO 26-27</h1>
+        </header>
+
+        <main>
+            <div class="contenedorcolumnas">
+                <nav class="columnamenu">
+
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="login.html">Inicio de sesi&oacute;n</a></li>
+                        <li><a href="actividades.html">Actividades</a></li>
+                        <li><a href="ponentes.html">Ponentes</a></li>
+                        <li><a href="asociaciones.html">Asociaciones</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="columnacontenido">
+                    <h2>Programa oficial del evento</h2>
+
+                    <table border="2">
+                        <thead>
+                            <tr>
+                                <th>Hora</th>
+                                <th>Lunes(D&iacute;a 1)</th>
+                                <th>Martes(D&iacute;a 2)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><time>9:00</time>-<time>11:00</time></td>
+                                <td colspan="2">PRESENTACI&Oacute;N</td>
+                            </tr>
+                            <tr>
+                                <td><time>11:00</time>-<time>12:30</time></td>
+                                <td>PONENTE: IA</td>
+                                <td>PONENTE: Entrevistas de exito</td>
+                            </tr>
+                            <tr>
+                                <td><time>12:30</time>-<time>14:00</time></td>
+                                <td>ACTIVIDADES</td>
+                                <td>ACTIVIDADES</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Organizaci&oacute;n del evento de ponencias y empleo</p>
+        </footer>
+    </body>
 </html>

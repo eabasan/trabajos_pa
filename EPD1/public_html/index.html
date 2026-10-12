@@ -5,22 +5,104 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenido</h1>
         <nav>
-          <a href="login.html">Iniciar Sesi&oacute;n</a>
+          <ul>
+            <li class="derecha"><a href="login.html", id="botondeinicio">Iniciar Sesi&oacute;n</a></li>
+            <li><a href="programa.html">Consultar programa</a></li>
+            <li><a href="actividades.html">Consultar actividades</a></li>
+            <li><a href="inscripcion.html">Consultar inscripciones</a></li>
+            <li><a href="ponentes.html">Consultar ponentes</a></li>
+            <li><a href="asociaciones.html">Consultar asociaciones</a></li>
+            <li><a href="multimedia.html">Consultar multimedia</a></li>
+            <li><a href="noticias.html">Consultar noticias</a></li>
+            <li><a href="contacto.html">Soporte</a></li>
+        </ul>
         </nav>
+        <style>
+            body {
+                background-color: #f4f4f9;
+                font-family: Arial, sans-serif;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                color: #333366;
+                text-align: center;
+            }
+            
+            
+            nav {
+                background-color: #333333;
+                overflow: hidden;
+            }
+
+            
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            
+            nav li {
+                float: left;
+            }
+            
+            nav li.derecha{
+                float: right;
+            }
+
+            
+            nav li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+            }
+
+            
+            nav li a:hover {
+                background-color: #555555;
+            }
+            .contenedor-central {
+                width: 80%;
+                margin: 40px auto;
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+            }
+            
+            .contenedor-central a {
+                display: inline-block;
+                background-color: #0056b3;
+                color: white;
+                padding: 8px 16px;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 5px; 
+                margin-bottom: 20px;
+            }
+
+            .contenedor-central a:hover {
+                background-color: #003366;
+            }
+        </style>
     </header>
     
-    <main>
+    <main class="contenedor-central">
         <section>
             <h2>
-                Programa del evento, todo lo que se viene
+                Programa del evento
             </h2>
             <a href="programa.html">Consultar programa</a>
         </section>
         <section>
             <h2>
-                Actividades para todo el p&uacute;blico
+                Actividades durante el evento
             </h2>
             <a href="actividades.html">Consultar actividades</a>
         </section>
@@ -32,19 +114,19 @@
         </section>
         <section>
             <h2>
-                Ponentes aqu&iacute;
+                Ponentes
             </h2>
             <a href="ponentes.html">Consultar ponentes</a>
         </section>
         <section>
             <h2>
-                Estas son nuestras asociaciones
+                Asociaciones
             </h2>
             <a href="asociaciones.html">Consultar asociaciones</a>
         </section>
         <section>
             <h2>
-                Contacta con los soportes del evento
+                Soporte
             </h2>
             <a href="contacto.html">Consultar contacto</a>
         </section>

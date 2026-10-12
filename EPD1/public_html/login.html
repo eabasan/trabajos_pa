@@ -5,11 +5,80 @@
 </head>
 <body>
     <header>
-        <h1>Iniciar sesi&oacute;n</h1>
+        <style>
+            body{
+                background-color: #f4f4f9;
+                font-family: Arial, sans-serif;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            nav{
+                background-color: #333333;
+                overflow: hidden;
+            }
+            
+            nav ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            nav li{
+                float: left;
+            }
+            
+            nav li a{
+                display: block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                padding: 14px 20px;
+            }
+            
+            nav li a:hover{
+                background-color: #555555;
+            }
+            
+            form{
+                width: 90%;
+                max-width: 400px;
+                margin: 50px auto;
+                background-color: #ffffff;
+                padding: 30px;
+            }
+            
+            input[type="email"], 
+            input[type="password"] {
+                width: 100%;
+                font-size: 18px;
+                padding: 10px; 
+                margin-top: 5px;
+                margin-bottom: 15px;
+                box-sizing: border-box;
+            }
+            
+            button {
+                width: 100%;
+                font-size: 18px;
+                padding: 10px;
+                background-color: #0056b3;
+                color: white;
+            }
+            
+            button:hover{
+                background-color:#003366;
+            }
+            
+            label{
+                font-size: 18px;
+                display: block;
+                margin-bottom: 5px;
+            }
+            
+        </style>
+        
         <nav>
-            <h4>
-                Navega r&aacute;pidamente
-            </h4>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="programa.html">Programa</a></li>
@@ -30,7 +99,7 @@
                 <fieldset>
                     <legend>Datos de acceso</legend>
                     <label for="usuario">Correo electr&oacute;nico:</label>
-                    <input type="email" id="usuario" name="usuario" placeholder="alumno@alu.upo.es" required>
+                    <input type="email" id="usuario" name="usuario" placeholder="alumno@alu.upo.es" required><br>
                     <label for="contraseña">Contrase&ntilde;a:</label>
                     <input type="password" id="contraseña" placeholder="Introduce la contrase&ntilde;a" required>
                     <br></br>
@@ -41,7 +110,7 @@
     </main>
     
     <footer>
-        <p>Organización del evento de ponencias y empleo</p>
+        <p>Organizaci&oacute;n del evento de ponencias y empleo</p>
     </footer>
 </body>
 </html>

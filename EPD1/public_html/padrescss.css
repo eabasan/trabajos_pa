@@ -1,0 +1,149 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 12 oct 2026, 0:29:07
+    Author     : Alejandro
+*/
+
+            body {
+                background-color: #f4f4f9;
+                font-family: Arial, sans-serif;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            
+            header {
+                background-color: #333333;
+                color: white;
+                padding: 20px 30px;
+                width: 100%;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            
+            .contenedorcolumnas{
+                width: 100%;
+                margin:0px;
+                overflow:hidden;
+                margin:0px;
+                
+            }
+            
+            .columnamenu{
+                float: left;
+                width: 5%;
+                padding: 0px;
+                margin: 0px;
+                background-color: #333333;
+                box-sizing: border-box;
+            }
+            
+            .columnamenu ul{
+                list-style-type: none;
+                margin: 0;
+                padding:0;
+            }
+            
+            .columnamenu a{
+                display: block;
+                font-size: 18px;
+                color: white;
+                text-align: left;
+                text-decoration: none;
+                padding: 14px 20px;
+            }
+            
+            .columnamenu a:hover{
+                background-color: #555555;
+            }
+            
+            .columnacontenido{
+                width: 94%;
+                float: left;
+                box-sizing: border-box;
+                padding:5px 30px;
+            }
+            
+            footer {
+                clear: both;
+                width: 100%;
+                text-align: center;
+                padding: 20px;
+                background-color: #f8f9fa;
+                margin-top: 20px;
+                box-sizing: border-box;
+            }
+            
+            table {
+                width: 50%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                background-color: white;
+                table-layout: fixed;
+            }
+
+            
+            th, td {
+                border: 1px solid #dddddd;
+                padding: 12px;
+                text-align: center;
+            }
+
+           
+            th {
+                background-color: #2c3e50;
+                color: white;
+                font-weight: bold;
+            }
+
+            
+            tr:nth-child(even) {
+                background-color: #f8f9fa;
+            }
+            
+            th:nth-child(1) {
+                width: 20%; 
+            }
+
+            th:nth-child(2), th:nth-child(3) {
+                width: 40%; 
+            }
+            
+            form{
+                width: 90%;
+                max-width: 400px;
+                margin: 0px;
+                background-color: #ffffff;
+                padding: 30px;
+            }
+            
+            input[type="text"], 
+            input[type="email"]{
+                width: 100%;
+                font-size: 18px;
+                padding: 10px; 
+                margin-top: 5px;
+                margin-bottom: 15px;
+                box-sizing: border-box;
+            }
+            
+            button {
+                width: 100%;
+                font-size: 18px;
+                padding: 10px;
+                background-color: #0056b3;
+                color: white;
+            }
+            
+            button:hover{
+                background-color:#003366;
+            }
+            
+            label{
+                font-size: 18px;
+                display: block;
+                margin-bottom: 5px;
+            }
