@@ -1,0 +1,103 @@
+================================================================================
+MEMORIA TÉCNICA Y REGLAS CSS APLICADAS - PRÁCTICA 2 (JORNADAS DE EMPLEO)
+================================================================================
+Asignatura: Programación Web / Tecnologías Web
+Institución: Universidad Pablo de Olavide (UPO)
+Año Académico: 2026
+Rama de trabajo: guille
+================================================================================
+
+1. ARQUITECTURA DE HOJAS DE ESTILO
+--------------------------------------------------------------------------------
+El proyecto organiza su diseño modular mediante dos hojas de estilo externas:
+
+a) estilo_padre.css:
+   - Destinada a las páginas de nivel superior (páginas padre):
+     index.html, programa.html, actividades.html, ponentes.html,
+     asociaciones.html, multimedia.html, inscripcion.html, contacto.html,
+     noticias.html, login.html.
+   - Distribución: Maquetación a 2 columnas (Navegación + Contenido principal).
+
+b) estilo_hija.css:
+   - Destinada a las páginas secundarias y de detalle (páginas hijas):
+     talleres.html, deportes.html, cultura.html, ponente1.html,
+     ponente2.html, noticia1.html, noticia2.html.
+   - Distribución: Maquetación a 3 columnas (Navegación secundaria +
+     Contenido principal + Barra lateral informativa con enlaces).
+
+
+2. RESET Y MODELO DE CAJA
+--------------------------------------------------------------------------------
+- Modelo de caja uniforme:
+  * {
+      box-sizing: border-box;
+  }
+  Garantiza que 'padding' y 'border' se computen dentro del ancho ('width')
+  especificado, evitando desbordamientos de línea y saltos de columna no
+  deseados al calcular porcentajes en maquetaciones basadas en flotación.
+
+
+3. TIPOGRAFÍA, PALETA DE COLORES Y CONTRASTE
+--------------------------------------------------------------------------------
+- Tipografía general:
+  Pila de fuentes de sistema sans-serif optimizada para legibilidad:
+  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif.
+
+- Paleta cromática corporativa:
+  * Fondo general (body): #f8fafc (Gris neutro de bajo contraste para descanso visual).
+  * Fondo de contenedores (.column): #ffffff (Blanco puro, tarjetas de contenido).
+  * Bordes estructurados: #e2e8f0 (Borde sutil de 1px).
+  * Texto estándar (p, li, address): #334155 (Gris pizarra de alta legibilidad, ratio WCAG AA).
+  * Jerarquía de encabezados:
+    - h1: #0f172a / #1e3a8a (Azul noche / marino profundo)
+    - h2: #1d4ed8 (Azul corporativo principal)
+    - h3: #2563eb / #darkslateblue (Azul medio complementario)
+  * Elementos interactivos (a):
+    - Estado normal: #2563eb (font-weight: 500, sin subrayado)
+    - Estado hover: #1d4ed8 (subrayado activo)
+  * Pie de página (footer): #94a3b8 con borde superior delimitador en #e2e8f0.
+
+
+4. SISTEMA DE MAQUETACIÓN MEDIANTE FLOATS Y ANCHOS CALCULADOS
+--------------------------------------------------------------------------------
+A) Estructura común:
+   - Contenedor (.container): Ancho máximo controlado (max-width: 1200px)
+     y centrado automático horizontal ('margin: 0 auto; width: 95%').
+   - Tarjetas (.column): 'float: left', bordes redondeados ('border-radius: 8px'),
+     relleno interno controlado ('padding') y sombra ligera ('box-shadow').
+
+B) Distribución en estilo_padre.css (2 Columnas - Total 100%):
+   - .col-nav  (Barra de navegación): width: 25%; margin-right: 3%;
+   - .col-main (Contenido principal): width: 72%;
+   Total ocupado: 25% + 3% + 72% = 100%.
+
+C) Distribución en estilo_hija.css (3 Columnas - Total 100%):
+   - .col-nav   (Menú contextual izquierdo): width: 20%; margin-right: 2%;
+   - .col-main  (Artículo / Contenido central): width: 54%; margin-right: 2%;
+   - .col-aside (Tercera columna / Enlaces): width: 22%;
+   Total ocupado: 20% + 2% + 54% + 2% + 22% = 100%.
+
+
+5. REGLAS DE LIMPIEZA DE FLOTACIÓN (CLEARFIX / CLEAR)
+--------------------------------------------------------------------------------
+- Regla crítica para el pie de página:
+  footer {
+      clear: both;
+      text-align: center;
+      padding: 18px 0;
+  }
+  Evita que la etiqueta <footer> se posicione debajo de la última columna
+  flotada o se solape con el flujo superior, forzándolo a colocarse
+  estrictamente en la base de la pantalla tras todas las cajas flotantes.
+
+
+6. BUENAS PRÁCTICAS SEMÁNTICAS Y ACCESIBILIDAD HTML5
+--------------------------------------------------------------------------------
+- Uso de etiquetas semánticas estructurales: <header>, <nav>, <main>,
+  <article>, <section>, <aside> y <footer>.
+- Formulación de enlaces con atributos 'aria-label' en menús y 'target="_blank"'
+  acompañado de 'rel="noopener"' en referencias externas.
+- Codificación estricta mediante entidades HTML estándar (&aacute;, &eacute;,
+  &oacute;, &ntilde;, &iquest;, etc.) preservando compatibilidad ante
+  ausencia forzada de metadato de codificación en cabecera.
+================================================================================

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Acceso - Jornadas de Empleo</title>
+    <link rel="stylesheet" type="text/css" href="estilo_padre.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Portal de Acceso</h1>
+            <p>&Aacute;rea restringida para ponentes, empresas y participantes</p>
+        </header>
+
+        <!-- Columna 1: Menú de navegación principal (Izquierda) -->
+        <nav class="column col-nav" aria-label="Men&uacute; principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="ponentes.html">Ponentes</a></li>
+                <li><a href="asociaciones.html">Asociaciones</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+
+        <!-- Columna 2: Contenido principal con formulario de acceso (Derecha) -->
+        <main class="column col-main">
+            <section>
+                <h2>Inicio de Sesi&oacute;n</h2>
+                <form action="#" method="post">
+                    <p>
+                        <label for="usuario">Nombre de usuario o correo electr&oacute;nico:</label><br>
+                        <input type="text" id="usuario" name="usuario" required autofocus placeholder="usuario@upo.es">
+                    </p>
+
+                    <p>
+                        <label for="password">Contrase&ntilde;a:</label><br>
+                        <input type="password" id="password" name="password" required>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox" name="recordar" value="si"> Recordar sesi&oacute;n en este equipo
+                        </label>
+                    </p>
+
+                    <p>
+                        <button type="submit">Iniciar sesi&oacute;n</button>
+                    </p>
+
+                    <p>
+                        <a href="#">&iquest;Olvidaste tu contrase&ntilde;a?</a>
+                    </p>
+                </form>
+            </section>
+        </main>
+
+        <!-- Pie de página fijado abajo con clear: both -->
+        <footer>
+            <p>&copy; UPO - 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

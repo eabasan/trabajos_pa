@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Ubicaci&oacute;n - Jornadas de Empleo</title>
+    <link rel="stylesheet" type="text/css" href="estilo_padre.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contacto y Ubicaci&oacute;n</h1>
+            <p>Resoluci&oacute;n de dudas e informaci&oacute;n sobre la sede del evento</p>
+        </header>
+
+        <!-- Columna 1: Menú de navegación principal (Izquierda) -->
+        <nav class="column col-nav" aria-label="Men&uacute; principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="ponentes.html">Ponentes</a></li>
+                <li><a href="asociaciones.html">Asociaciones</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="inscripcion.html">Inscripci&oacute;n</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+
+        <!-- Columna 2: Contenido principal de contacto (Derecha) -->
+        <main class="column col-main">
+            <section>
+                <h2>Datos de contacto</h2>
+                <address>
+                    <p>
+                        Escuela Polit&eacute;cnica Superior<br>
+                        Edificio 2, Planta Baja<br>
+                        Campus Universitario
+                    </p>
+                    <p>
+                        Tel&eacute;fono: <a href="tel:+34954999999">+34 954 999 999</a><br>
+                        Correo: <a href="mailto:upo@upo.es">upo@upo.es</a>
+                    </p>
+                </address>
+            </section>
+
+            <section>
+                <h2>Env&iacute;anos tu Consulta</h2>
+                <form action="#" method="post">
+                    <p>
+                        <label for="nombre">Nombre completo:</label><br>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellidos">
+                    </p>
+
+                    <p>
+                        <label for="email">Correo electr&oacute;nico:</label><br>
+                        <input type="email" id="email" name="email" required placeholder="usuario@upo.es">
+                    </p>
+
+                    <p>
+                        <label for="asunto">Asunto:</label><br>
+                        <input type="text" id="asunto" name="asunto" required placeholder="Motivo del mensaje">
+                    </p>
+
+                    <p>
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea id="mensaje" name="mensaje" rows="5" cols="40" required placeholder="Escribe tu mensaje aqu&iacute;..."></textarea>
+                    </p>
+
+                    <p>
+                        <button type="submit">Enviar mensaje</button>
+                    </p>
+                </form>
+            </section>
+        </main>
+
+        <!-- Pie de página fijado abajo con clear: both -->
+        <footer>
+            <p>&copy; UPO - 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
