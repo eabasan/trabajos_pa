@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Verificación de Reserva QR - Gimnasio</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9f9fb; }
+            h2 { color: #333; }
+            button { padding: 10px 15px; font-size: 16px; background-color: #2c3e50; color: white; border: none; cursor: pointer; border-radius: 4px; margin-bottom: 20px; }
+            button:hover { background-color: #34495e; }
+            table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+            th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+            th { background-color: #2c3e50; color: white; }
+        </style>
+    </head>
+    <body>
+        <h2>Sistema de Acceso y Validación de Reservas - Gimnasio UPO</h2>
+        <p>Haz clic en el botón para simular la lectura del código QR del usuario:</p>
+
+        <!-- Botón de interacción del usuario -->
+        <button id="btnEscanear">Escanear Código QR</button>
+
+        <!-- Contenedor donde se insertará la tabla mediante el DOM -->
+        <div id="resultado-contenedor"></div>
+
+        <!-- Script externo de JavaScript -->
+        <script type="text/javascript" src="codigo.js"></script>
+    </body>
+</html>
