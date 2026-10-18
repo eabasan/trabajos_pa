@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Ejercicio 4 - Pagina 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #E9F1FA;
+                color: #333333;
+                margin: 0;
+                padding: 40px 20px;
+            }
+
+            #contenedor {
+                max-width: 550px;
+                margin: 0 auto;
+                background-color: #FFFFFF;
+                border: 1px solid #D9E2EC;
+                border-radius: 8px;
+                padding: 30px;
+                text-align: center;
+            }
+
+            h1 {
+                color: #213F99;
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+
+            .fuente {
+                font-size: 0.9em;
+                color: #555555;
+                margin-bottom: 25px;
+                background-color: #F8FAFC;
+                padding: 12px;
+                border-left: 4px solid #213F99;
+                border-radius: 4px;
+                text-align: left;
+            }
+
+            .fuente a {
+                color: #213F99;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .fuente a:hover {
+                text-decoration: underline;
+            }
+
+            label {
+                font-weight: bold;
+                display: block;
+                margin-bottom: 8px;
+                color: #213F99;
+            }
+
+            input[type="color"] {
+                width: 70px;
+                height: 40px;
+                border: 1px solid #B0BEC5;
+                border-radius: 4px;
+                cursor: pointer;
+                background-color: #FFFFFF;
+                vertical-align: middle;
+            }
+
+            .boton_contenedor {
+                margin: 20px 0;
+            }
+
+            button {
+                background-color: #213F99;
+                color: #FFFFFF;
+                border: none;
+                padding: 10px 18px;
+                font-size: 1em;
+                border-radius: 4px;
+                cursor: pointer;
+                font-weight: bold;
+                margin: 0 5px;
+            }
+
+            button:hover {
+                background-color: #001F66;
+            }
+
+            .caja_muestra {
+                display: block;
+                width: 100%;
+                height: 140px;
+                line-height: 140px;
+                border-radius: 6px;
+                background-color: #213F99;
+                color: #FFFFFF;
+                font-size: 1.6em;
+                font-weight: bold;
+                border: 2px solid #D9E2EC;
+                box-sizing: border-box;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <main id="contenedor">
+            <h1>Aclarar u Oscurecer Color</h1>
+            <aside class="fuente">
+                <strong>Snippet utilizado: </strong> Lighten / Darken Color<br>
+                <strong>URL: </strong><a href="https://css-tricks.com/snippets/javascript/lighten-darken-color/" target="_blank">Enlace</a>
+            </aside>
+            
+            <p>
+                <label for="color_base">Color original:</label>
+                <input type="color" id="color_base" value="#213F99" onchange="actualizarBase()">
+            </p>
+            <p class="boton_contenedor">
+                <button type="button" onclick="ajustarTono(30)">+ Aclarar (+30)</button>
+                <button type="button" onclick="ajustarTono(-30)">- Oscurecer (-30)</button>
+            </p>
+            <p>
+                <label for="muestra_resultado">Resultado del ajuste:</label>
+                <output id="muestra_resultado" class="caja_muestra">#213F99</output>
+            </p>
+        </main>
+        <script>
+            function LightenDarkenColor(col, amt) {
+                var usePound = false;
+
+                if (col[0] == "#") {
+                    col = col.slice(1);
+                    usePound = true;
+                }
+
+                var num = parseInt(col, 16);
+
+                var r = (num >> 16) + amt;
+                if (r > 255) r = 255;
+                else if (r < 0) r = 0;
+
+                var b = ((num >> 8) & 0x00FF) + amt;
+                if (b > 255) b = 255;
+                else if (b < 0) b = 0;
+
+                var g = (num & 0x0000FF) + amt;
+                if (g > 255) g = 255;
+                else if (g < 0) g = 0;
+
+                return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
+            }
+            var colorActual = "#213F99";
+            
+            function actualizarBase() {
+                colorActual = document.getElementById("color_base").value;
+                mostrarColor(colorActual);
+            }
+
+            function ajustarTono(cantidad) {
+                colorActual = LightenDarkenColor(colorActual, cantidad);
+                mostrarColor(colorActual);
+            }
+
+            function mostrarColor(hex) {
+                var salida = document.getElementById("muestra_resultado");
+                salida.style.backgroundColor = hex;
+                salida.textContent = hex.toUpperCase();
+            }
+        </script>
+    </body>
+</html>

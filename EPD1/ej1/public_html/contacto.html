@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="es">
+    <head>
+        <title>Contacto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Feria de Empleo y Ponencias UPO</h1>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programa.html">Programa</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="ponentes.html">Ponentes</a></li>
+                <li><a href="asociaciones.html">Asociaciones</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="inscripcion.html">Inscripción</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>  
+        </nav>
+        <main>
+            <section>
+                <h2>Información de Contacto y Ubicación</h2>
+                <p>Si tienes cualquier duda sobre la feria, los horarios o las inscripciones, puedes visitarnos en el campus o escribirnos a través del formulario.</p>
+
+                <article>
+                    <h3>Sede del Evento</h3>
+                    <address>
+                        <strong>Universidad Pablo de Olavide</strong><br>
+                        Edificio 11 (Área de Gestión y Eventos)<br>
+                        Ctra. de Utrera, km 1, 41013 Sevilla<br>
+                        Teléfono: <a href="tel:+34954349200">954 349 200</a><br>
+                        Contacto: <a href="mailto:comision.coordinacion.feria@upo.es">comision.<wbr>coordinacion.<wbr>feria@upo.es</a>
+                    </address>
+                </article>
+
+                <figure>
+                    <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSeqBjVytEogVHjtrV8ZYbX2ubi1azyhuXPzsJxhKyTVi0hq8gozFN3l1E56RUkR8aHJtxMoNpfzJYFHHs" alt="Instalaciones del campus universitario" width="500">
+                    <figcaption>Figura 1: Vista general de las instalaciones y zonas de paso del campus.</figcaption>
+                </figure>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Envíanos tu Consulta</h2>
+                <form action="#">
+                    <fieldset>
+                        <legend>Formulario de Dudas</legend>
+
+                        <p>
+                            <label for="nombre_contacto">Nombre:</label><br>
+                            <input type="text" id="nombre_contacto" name="nombre_contacto" required placeholder="Tu nombre">
+                        </p>
+
+                        <p>
+                            <label for="email_contacto">Correo electrónico:</label><br>
+                            <input type="email" id="email_contacto" name="email_contacto" required placeholder="ejemplo@upo.es">
+                        </p>
+
+                        <p>
+                            <label for="motivo">Motivo de contacto:</label><br>
+                            <select id="motivo" name="motivo">
+                                <option value="general">Información general</option>
+                                <option value="empresas">Stand para empresas</option>
+                                <option value="talleres">Dudas sobre talleres</option>
+                                <option value="otros">Otros asuntos</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="mensaje">Mensaje:</label><br>
+                            <textarea id="mensaje" name="mensaje" rows="5" cols="40" required placeholder="Escribe aquí tu consulta..."></textarea>
+                        </p>
+
+                        <p>
+                            <input type="submit" value="Enviar mensaje">
+                            <input type="reset" value="Limpiar">
+                        </p>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section>
+                <h2>Preguntas Frecuentes</h2>
+                <details>
+                    <summary>¿La entrada a la feria es gratuita?</summary>
+                    <p>Sí, la asistencia es totalmente gratuita para todos los miembros de la comunidad universitaria.</p>
+                </details>
+            </section>
+        </main>
+        <footer>
+            <p>Pablo de Olavide 2026</p>
+        </footer>
+    </body>
+</html>
