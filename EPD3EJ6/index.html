@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="es">
+    <head>
+        <title>Reserva del gimnasio</title>
+    </head>
+    <body>
+        <h1>Reserva del gimnasio</h1>
+
+        <p>Introduce la URL del QR para comprobar tu reserva.</p>
+        <button onclick="leerQR()">Leer QR</button>
+
+        <br>
+        <br>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Par&aacute;metro</th>
+                    <th>Valor</th>
+                    <th>Validaci&oacute;n</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Actividad</td>
+                    <td id="valorActividad"></td>
+                    <td id="validacionActividad"></td>
+                </tr>
+
+                <tr>
+                    <td>Duraci&oacute;n</td>
+                    <td id="valorDuracion"></td>
+                    <td id="validacionDuracion"></td>
+                </tr>
+
+                <tr>
+                    <td>Identificador del participante</td>
+                    <td id="valorParticipante"></td>
+                    <td id="validacionParticipante"></td>
+                </tr>
+
+                <tr>
+                    <td>Coste total</td>
+                    <td id="valorPrecio"></td>
+                    <td id="estadoReserva"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+            function leerQR() {
+                let url = prompt("Introduce la URL del QR:");
+
+                if (url === null) {
+                    return;
+                }
+
+                document.getElementById("valorActividad").textContent = "";
+                document.getElementById("valorDuracion").textContent = "";
+                document.getElementById("valorParticipante").textContent = "";
+                document.getElementById("validacionActividad").textContent = "";
+                document.getElementById("validacionDuracion").textContent = "";
+                document.getElementById("validacionParticipante").textContent = "";
+                document.getElementById("valorPrecio").textContent = "";
+                document.getElementById("estadoReserva").textContent = "";
+
+                let reserva;
+
+                try {
+                    reserva = new URL(url);
+
+                    if (reserva.protocol !== "http:" &&
+                            reserva.protocol !== "https:") {
+                        throw new Error("URL no valida");
+                    }
+                } catch (error) {
+                    document.getElementById("validacionActividad").textContent =
+                            "Incorrecto - URL no v\u00E1lida";
+
+                    document.getElementById("validacionDuracion").textContent =
+                            "No se puede comprobar";
+
+                    document.getElementById("validacionParticipante").textContent =
+                            "No se puede comprobar";
+
+                    document.getElementById("estadoReserva").textContent =
+                            "RESERVA RECHAZADA";
+
+                    return;
+                }
+
+                let actividad = reserva.searchParams.get("actividad");
+                let duracion = reserva.searchParams.get("duracion");
+                let participante = reserva.searchParams.get("id_participante");
+
+                document.getElementById("valorActividad").textContent = actividad;
+                document.getElementById("valorDuracion").textContent = duracion;
+                document.getElementById("valorParticipante").textContent = participante;
+
+                duracion = Number(duracion);
+                participante = Number(participante);
+
+                let duracionCorrecta = duracion >= 30 && duracion <= 120;
+
+                if (duracionCorrecta) {
+                    document.getElementById("validacionDuracion").textContent =
+                            "Correcta";
+                } else if (duracion > 120) {
+                    document.getElementById("validacionDuracion").textContent =
+                            "Incorrecto - Duraci\u00F3n m\u00E1xima excedida";
+                } else {
+                    document.getElementById("validacionDuracion").textContent =
+                            "Incorrecto - Duraci\u00F3n no v\u00E1lida";
+                }
+
+                let participanteCorrecto = Number.isInteger(participante)
+                        && participante >= 1 && participante <= 50;
+
+                if (participanteCorrecto) {
+                    document.getElementById("validacionParticipante").textContent =
+                            "Correcta";
+                } else {
+                    document.getElementById("validacionParticipante").textContent =
+                            "Incorrecto";
+                }
+
+
+                let actividadesPermitidas = [
+                    "spinning",
+                    "yoga",
+                    "pilates",
+                    "zumba",
+                    "crossfit",
+                    "aqua",
+                    "bodycombat",
+                    "trx"
+                ];
+
+                let actividadCorrecta = actividadesPermitidas.includes(actividad);
+
+                if (actividadCorrecta) {
+                    document.getElementById("validacionActividad").textContent =
+                            "Correcta";
+                } else {
+                    document.getElementById("validacionActividad").textContent =
+                            "Incorrecto - Actividad no reconocida";
+                }
+
+                let reservaCorrecta = actividadCorrecta
+                        && duracionCorrecta && participanteCorrecto;
+
+                if (reservaCorrecta) {
+                    let precio = 1.50;
+
+                    if (duracion > 30) {
+                        precio = precio + 0.50;
+                    }
+
+                    if (participante >= 1 && participante <= 15) {
+                        precio = precio * 0.90;
+                    }
+
+                    document.getElementById("valorPrecio").textContent =
+                            precio.toFixed(2) + " \u20AC";
+
+                    document.getElementById("estadoReserva").textContent =
+                            "RESERVA REALIZADA";
+                } else {
+                    document.getElementById("valorPrecio").textContent = "";
+
+                    document.getElementById("estadoReserva").textContent =
+                            "RESERVA RECHAZADA";
+                }
+            }
+        </script>
+    </body>
+</html>
