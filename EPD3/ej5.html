@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+--> 
+<html>
+    <head>
+        <title>Gimnasio - Ejercicio 5</title>
+    </head>
+    <body>
+        <h1>Gesti&oacute;n de Gimnasio</h1>
+        <p>Revisa las ventanas emergentes para interactuar con la aplicaci&oacute;n.</p>
+
+        <script type="text/javascript">
+        <!--
+
+            var actividades = [
+                {nombre: "Spinning", instructor: "Ana L\u00F3pez", plazas: 15},
+                {nombre: "Yoga", instructor: "Carmen Ruiz", plazas: 12},
+                {nombre: "Pilates", instructor: "Miguel Moya", plazas: 10},
+                {nombre: "Zumba", instructor: "Laura Mart\u00EDn", plazas: 20},
+                {nombre: "CrossFit", instructor: "David Garc\u00EDa", plazas: 8},
+                {nombre: "Aqua Aer\u00F3bicos", instructor: "Elena S\u00E1nchez", plazas: 18},
+                {nombre: "BodyCombat", instructor: "Carlos Vega", plazas: 16},
+                {nombre: "TRX", instructor: "Mar\u00EDa Gonz\u00E1lez", plazas: 6},
+                {nombre: "Boxeo", instructor: "Juan P\u00E9rez", plazas: 14},
+                {nombre: "Estiramientos", instructor: "Sara G\u00F3mez", plazas: 25}
+            ];
+
+            function mostrarActividades() {
+                var listado = "Actividades Disponibles:\n\n";
+                for (var i = 0; i < actividades.length; i++) {
+                    listado += actividades[i].nombre + ": " + actividades[i].instructor + " - " + actividades[i].plazas + " plazas\n";
+                }
+                return listado;
+            }
+
+            function reservarPlaza() {
+                var nombreActividad = prompt("Ingrese el nombre de la actividad para reservar:");
+                if (!nombreActividad)
+                    return;
+
+                var encontrada = false;
+                for (var i = 0; i < actividades.length; i++) {
+                    if (actividades[i].nombre.toLowerCase() === nombreActividad.toLowerCase()) {
+                        encontrada = true;
+                        if (actividades[i].plazas > 0) {
+                            actividades[i].plazas--;
+                            alert("Plaza reservada con \u00E9xito en " + actividades[i].nombre + ".");
+                        } else {
+                            alert("Error: No hay plazas disponibles en " + actividades[i].nombre + ".");
+                        }
+                        break;
+                    }
+                }
+                if (!encontrada) {
+                    alert("Error: La actividad indicada no existe.");
+                }
+            }
+
+            function liberarPlaza() {
+                var nombreActividad = prompt("Ingrese el nombre de la actividad para liberar plaza:");
+                if (!nombreActividad)
+                    return;
+
+                var encontrada = false;
+                for (var i = 0; i < actividades.length; i++) {
+                    if (actividades[i].nombre.toLowerCase() === nombreActividad.toLowerCase()) {
+                        encontrada = true;
+                        actividades[i].plazas++;
+                        alert("Plaza liberada con \u00E9xito en " + actividades[i].nombre + ".");
+                        break;
+                    }
+                }
+                if (!encontrada) {
+                    alert("Error: La actividad indicada no existe.");
+                }
+            }
+
+            function agregarActividad() {
+                var nombre = prompt("Ingrese el nombre de la nueva actividad:");
+                var instructor = prompt("Ingrese el nombre del instructor:");
+                var plazasStr = prompt("Ingrese el n\u00FAmero de plazas:");
+                var plazas = parseInt(plazasStr);
+
+                if (nombre && instructor && !isNaN(plazas) && plazas > 0) {
+                    actividades.push({nombre: nombre, instructor: instructor, plazas: plazas});
+                    alert("Actividad agregada con \u00E9xito.");
+                } else {
+                    alert("Error: Los datos ingresados no son v\u00E1lidos.");
+                }
+            }
+
+            function iniciarAplicacion() {
+                var opcion;
+                do {
+                    var menu = mostrarActividades() +
+                            "\n\u00BFQu\u00E9 operaci\u00F3n desea realizar?\n" +
+                            "1. Mostrar actividades\n" +
+                            "2. Reservar plaza\n" +
+                            "3. Liberar plaza\n" +
+                            "4. Agregar actividad\n" +
+                            "5. Salir";
+
+                    opcion = prompt(menu);
+
+                    switch (opcion) {
+                        case "1":
+                            alert(mostrarActividades());
+                            break;
+                        case "2":
+                            reservarPlaza();
+                            break;
+                        case "3":
+                            liberarPlaza();
+                            break;
+                        case "4":
+                            agregarActividad();
+                            break;
+                        case "5":
+                            alert("Saliendo de la aplicaci\u00F3n del gimnasio...");
+                            break;
+                        default:
+                            if (opcion !== null) {
+                                alert("Opci\u00F3n no v\u00E1lida. Por favor, seleccione un n\u00FAmero del 1 al 5.");
+                            }
+                            break;
+                    }
+                } while (opcion !== "5" && opcion !== null);
+            }
+
+            iniciarAplicacion();
+        //-->
+        </script>
+    </body>
+</html>
