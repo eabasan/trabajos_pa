@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>SOC - Centro de Operaciones de Ciberseguridad</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .contenedor-soc {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        h1, h2, h3 {
+            color: #58a6ff;
+            margin-top: 0;
+        }
+
+        .panel-control {
+            background-color: #21262d;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #58a6ff;
+        }
+
+        .barra-progreso-contenedor {
+            width: 100%;
+            background-color: #30363d;
+            border-radius: 4px;
+            height: 16px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .barra-progreso {
+            width: 0%;
+            height: 100%;
+            background-color: #238636;
+            transition: width 0.3s ease;
+        }
+
+        .temporizador {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #79c0ff;
+        }
+
+        .alerta-tiempo {
+            color: #f85149 !important;
+            animation: parpadeo 1s infinite;
+        }
+
+        @keyframes parpadeo {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        .tarjeta-incidencia {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn-accion {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background-color: #21262d;
+            color: #c9d1d9;
+            border: 1px solid #30363d;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .btn-hover {
+            background-color: #30363d !important;
+            border-color: #8b949e !important;
+        }
+
+        .btn-correcto {
+            background-color: #238636 !important;
+            color: #ffffff !important;
+            border-color: #2ea043 !important;
+        }
+
+        .btn-incorrecto {
+            background-color: #da3633 !important;
+            color: #ffffff !important;
+            border-color: #f85149 !important;
+        }
+
+        .btn-principal {
+            background-color: #238636;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn-principal:hover {
+            background-color: #2ea043;
+        }
+
+        .panel-veredicto {
+            background-color: #21262d;
+            border-left: 4px solid #f0883e;
+            padding: 15px;
+            margin-top: 15px;
+            white-space: pre-wrap;
+        }
+
+        .tarjeta-historial {
+            background-color: #0d1117;
+            border-left: 3px solid #8b949e;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            font-size: 0.88rem;
+            white-space: pre-wrap;
+        }
+
+        pre {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            padding: 15px;
+            border-radius: 6px;
+            color: #58a6ff;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-soc">
+        <header>
+            <h1>Centro de Operaciones de Ciberseguridad (SOC)</h1>
+            <p><strong>Puesto:</strong> Analista de Guardia &middot; <strong>Objetivo:</strong> Diagnosticar y mitigar 5 incidentes cr&iacute;ticos en la infraestructura universitaria.</p>
+        </header>
+
+        <div class="panel-control">
+            <div>
+                <div><strong>Puntuaci&oacute;n:</strong> <span id="marcador-puntos">0</span></div>
+                <div><strong>Incidencias resueltas:</strong> <span id="marcador-resueltas">0/5</span></div>
+            </div>
+            <div id="contenedor-reloj" style="text-align: right; display: none;">
+                <div class="temporizador" id="texto-temporizador">Tiempo: 25s</div>
+                <div id="aviso-tiempo" style="font-size: 0.8rem; font-weight: bold; display: none;">Atenci&oacute;n: poco tiempo de respuesta</div>
+            </div>
+        </div>
+
+        <div>
+            <div style="font-size: 0.85rem; margin-bottom: 4px;">Progreso de la guardia: <span id="porcentaje-progreso">0%</span></div>
+            <div class="barra-progreso-contenedor">
+                <div class="barra-progreso" id="barra-progreso"></div>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #30363d; margin: 20px 0;">
+
+        <main id="area-trabajo">
+            <div id="pantalla-inicio" style="text-align: center; padding: 30px 0;">
+                <p>Presione el bot&oacute;n inferior para iniciar su turno. Cada incidencia tiene un l&iacute;mite estricto de 25 segundos.</p>
+                <button type="button" class="btn-principal" id="btn-iniciar" onclick="iniciarTurno()">Iniciar turno</button>
+            </div>
+            <div id="contenedor-incidencia" style="display: none;"></div>
+            <div id="contenedor-informe" style="display: none;"></div>
+        </main>
+
+        <section style="margin-top: 30px;">
+            <h3>Historial de actividad</h3>
+            <div id="historial-actividad">
+                <p style="color: #8b949e; font-style: italic;">No hay actividad registrada en la guardia actual.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="ejercicio2.js"></script>
+</body>
+</html>
