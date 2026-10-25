@@ -1,0 +1,105 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Oct 25, 2026, 3:07:43 PM
+    Author     : ziada
+*/
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f5ef;
+    color:#243524;
+    margin: 0;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    border: 1px solid #c8d8c4;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+button{
+    background-color: #347433;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #245323;
+}
+
+button:disabled{
+    background-color: #767676;
+    cursor: not-allowed;
+}
+
+#ecosistema{
+    position: relative;
+    height: 400px;
+    background-color:#e1f0d5;
+    border: 2px solid #347433;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#info-organismo{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff4ce;
+    border-radius: 5px;
+}
+#eventos-lista{
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.organismo{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.planta{
+    background-color: #347433;
+}
+
+.herbivoro {
+    background-color: #2878c8;
+}
+
+.carnivoro {
+    background-color: #cc3333;
+}
+
+.omnivoro {
+    background-color: #8844bb;
+}
+.organismo {
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.organismo.desapareciendo {
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+}
+
+#eventos-lista p {
+    margin: 0;
+    padding: 8px;
+    border-bottom: 1px solid #dddddd;
+}
