@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecosistema virtual</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="interface.js" defer></script>
+
+    </head>
+    <body>
+        <h1>Ecosistema virtual</h1>
+
+        <section id="panel-control">
+            <h2>Controles</h2>
+            <button type="button" data-especie="herbivoro">A&ntilde;adir herb&iacute;voro</button>
+            <button type="button" data-especie="carnivoro">A&ntilde;adir carn&iacute;voro</button>
+            <button type="button" data-especie="planta">A&ntilde;adir planta</button>
+            <button type="button" data-especie="omnivoro">A&ntilde;adir omn&iacute;voro</button>
+            <button type="button" id="btn-pausa" disabled>Pausar simulaci&oacute;n</button>
+        </section>
+
+        <section id="estadisticas">
+            <h2>Estad&iacute;sticas</h2>
+            <p>Herb&iacute;voros:
+                <span id="count-herbivoro">0</span>
+            </p>
+            <p>Carni&iacute;voros:
+                <span id="count-carnivoro">0</span>
+            </p>
+            <p>Plantas:
+                <span id="count-planta">0</span>
+            </p>
+            <p>Omn&iacute;voros;
+                <span id="count-omnivoro">0</span>
+            </p>
+            <p>Generaci&oacute;n
+                <span id="generacion">1</span>
+            </p>
+            <p>Estado:
+                <span id="estado-ecosistema">Sin iniciar</span>
+            </p>
+        </section>
+
+        <section>
+            <h2>Zona del ecosistema</h2>
+            <div id="ecosistema"></div>
+            <div id="info-organismo" role="status" hidden></div>
+        </section>
+
+        <section id="log-eventos">
+            <h2>Registro de eventos</h2>
+            <div id="eventos-lista"></div>
+        </section>
+    </body>
+</html>
