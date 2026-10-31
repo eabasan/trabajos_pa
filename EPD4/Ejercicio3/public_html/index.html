@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Juego del Cuadrado M&aacute;gico - UPO</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 30px;
+                background-color: #f4f4f9;
+                color: #333;
+                text-align: center;
+            }
+            h2 {
+                color: #2c3e50;
+            }
+            #panel-juego {
+                max-width: 450px;
+                margin: 0 auto;
+                background: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+            .info-bar {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 15px;
+                font-weight: bold;
+                font-size: 14px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 15px;
+            }
+            td {
+                width: 33.33%;
+                height: 60px;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 24px;
+                font-weight: bold;
+                cursor: pointer;
+                border: 2px solid #ccc;
+                transition: background-color 0.2s;
+            }
+
+            /* Estados visuales requeridos */
+            .celda-vacia {
+                background-color: #ffffff;
+                border: 2px dashed #c0392b;
+            }
+            .celda-incompleta {
+                border: 2px solid #c0392b;
+                background-color: #fadbd8;
+            }
+            .celda-activa {
+                background-color: #ebf5fb !important;
+                border: 3px solid #3498db !important;
+            }
+            .celda-completada {
+                background-color: #eaeded;
+            }
+            .celda-magica {
+                background-color: #f1c40f !important;
+                color: #fff;
+                border: 2px solid #d4ac0d;
+            }
+
+            #aviso {
+                min-height: 24px;
+                color: #c0392b;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+            .controles {
+                margin-top: 15px;
+            }
+            button {
+                padding: 10px 15px;
+                font-size: 14px;
+                background-color: #2c3e50;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 4px;
+                margin: 0 5px;
+            }
+            button:hover {
+                background-color: #34495e;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="panel-juego">
+            <h2>Juego del Cuadrado M&aacute;gico</h2>
+            <div class="info-bar">
+                <span id="txt-cronos">Tiempo: 0s</span>
+                <span id="txt-intentos">Intentos fallidos: 0</span>
+                <span id="txt-restantes">Restantes: 9</span>
+            </div>
+            <p>Suma objetivo: <span id="txt-suma-objetivo">15</span></p>
+
+            <!-- Contenedor donde se creará dinámicamente la tabla de 3x3 -->
+            <div id="contenedor-tabla"></div>
+
+            <div id="aviso"></div>
+
+            <div class="controles">
+                <button id="btnReiniciar">Nueva partida</button>
+                <button id="btnResolver">Resolver</button>
+            </div>
+        </div>
+
+        <!-- Script externo de JavaScript -->
+        <script type="text/javascript" src="codigo.js"></script>
+    </body>
+</html>
