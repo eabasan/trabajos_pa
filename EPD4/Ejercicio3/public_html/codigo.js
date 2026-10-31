@@ -10,6 +10,7 @@ let segundosTranscurridos = 0;
 let timerCronometro = null;
 let intentosFallidos = 0;
 let juegoTerminado = false;
+let tableroModificado = false;
 
 // Inicialización al cargar la página
 window.onload = function (){
@@ -20,6 +21,12 @@ window.onload = function (){
     document.getElementById("btnReiniciar").addEventListener("click", reiniciarJuego);
     document.getElementById("btnResolver").addEventListener("click", resolverJuegoAutomatico);
     document.addEventListener("keydown", validarTecla);
+    document.addEventListener("keyup", function(){
+    if(tableroModificado && !juegoTerminado){
+        tableroModificado = false;
+        verificarCuadradoMagico();
+    }
+    });
 };
 
 // Función que construye la tabla 3x3 en el DOM
@@ -77,41 +84,49 @@ function validarTecla(event){
         return;
     }
 
-    let avisoDiv = document.getElementById("aviso");
+    const avisoDiv = document.getElementById("aviso");
+    const tecla = event.key;
 
-    // Comprobamos las teclas numéricas del 1 al 9 (o 0 para borrar)
-    let tecla = event.key;
-
+    // Comprobamos si la tecla pulsada es un número del 1 al 9
     if(tecla >= "1" && tecla <= "9"){
-        let numero = parseInt(tecla);
+        const numero = parseInt(tecla);
 
-        // Validamos si el número ya está repetido en el cuadrado (excluyendo la celda actual)
+        // Comprobamos que el número no esté repetido
         if(estaNumeroRepetido(numero, filaActiva, colActiva)){
             avisoDiv.textContent = "No puedes repetir n\u00fameros. Cada cifra del 1 al 9 debe aparecer solo una vez.";
             return;
         }
 
         avisoDiv.textContent = "";
-        matrizValores[filaActiva][colActiva] = numero;
 
-        refrescarTableroVisual();
+        if(matrizValores[filaActiva][colActiva] !== numero){
+            matrizValores[filaActiva][colActiva] = numero;
 
-        // Avanzamos automáticamente a la siguiente celda vacía para agilizar
-        encontrarSiguienteCeldaVacia();
+            // Indicamos que el tablero ha cambiado
+            tableroModificado = true;
 
-    }else if(tecla === "0" || tecla === "Backspace" || tecla === "Delete"){
-        // Permitimos borrar la celda activa
-        matrizValores[filaActiva][colActiva] = "";
+            refrescarTableroVisual();
+
+            // Avanzamos automáticamente a la siguiente celda vacía
+            encontrarSiguienteCeldaVacia();
+        }
+
+    }else if(tecla === "Backspace" || tecla === "Delete"){
+        // Permitimos borrar el contenido de la celda activa
+        event.preventDefault();
+
+        if(matrizValores[filaActiva][colActiva] !== ""){
+            matrizValores[filaActiva][colActiva] = "";
+            tableroModificado = true;
+        }
+
         avisoDiv.textContent = "";
         refrescarTableroVisual();
 
-    }else if(tecla.length === 1 && !isNaN(tecla)){
-        // Si pulsa 0 o caracteres no válidos de rango
+    }else if(tecla.length === 1){
+        // Avisamos cuando se introduce una tecla que no es válida
         avisoDiv.textContent = "S\u00f3lo se aceptan n\u00fameros del 1 al 9.";
     }
-
-    // Realizamos la verificación tras soltar o pulsar (keyup lógico)
-    verificarCuadradoMagico();
 }
 
 // Función Tecla liberada  (verificación en tiempo real (keyup))
@@ -145,9 +160,10 @@ function verificarCuadradoMagico(){
             detenerCronometro();
             aplicarEstiloMagicoResuelto();
             document.getElementById("aviso").style.color = "#27ae60";
-            document.getElementById("aviso.textContent") = "";
+            document.getElementById("aviso").textContent = "";
             
             alert("\u00a1FELICIDADES!\nHas resuelto el cuadrado m\u00e1gico en " + segundosTranscurridos + " segundos\nSuma m\u00e1gica: 15\n\u00bfQuieres intentar otro?");
+            reiniciarJuego();
         }else{
             // Solución incorrecta: incrementamos los intentos fallidos
             intentosFallidos++;
@@ -155,7 +171,7 @@ function verificarCuadradoMagico(){
             document.getElementById("aviso").textContent = "Este no es un cuadrado m\u00e1gico. Las sumas no coinciden. \u00a1Sigue intentando!";
 
             // Pista automática tras 3 intentos fallidos
-            if(intentosFallidos >= 3){
+            if(intentosFallidos === 3){
                 aplicarPistaAutomatica();
             }
         }
@@ -177,8 +193,11 @@ function reiniciarJuego(){
     segundosTranscurridos = 0;
     intentosFallidos = 0;
     juegoTerminado = false;
+    tableroModificado = false;
     document.getElementById("aviso").textContent = "";
     document.getElementById("aviso").style.color = "#c0392b";
+    document.getElementById("txt-cronos").textContent = "Tiempo: 0s";
+    document.getElementById("txt-intentos").textContent = "Intentos fallidos: 0";
 
     detenerCronometro();
     iniciarCronometro();
@@ -318,11 +337,22 @@ function aplicarPistaAutomatica(){
     for(let i = 0; i < 3; i++){
         for(let j = 0; j < 3; j++){
             if(matrizValores[i][j] !== solucionValida[i][j]){
-                matrizValores[i][j] = solucionValida[i][j];
-                document.getElementById("aviso").textContent = "¡Pista aplicada! Se ha corregido una celda.";
-                refrescarTableroVisual();
-                verificarCuadradoMagico();
-                return;
+                let numeroAnterior = matrizValores[i][j];
+                let numeroCorrecto = solucionValida[i][j];
+                // Buscamos dónde se encuentra el número correcto
+                for(let f = 0; f < 3; f++){
+                    for(let c = 0; c < 3; c++){
+                        if(matrizValores[f][c] === numeroCorrecto){
+                            // Intercambiamos los dos números
+                            matrizValores[f][c] = numeroAnterior;
+                            matrizValores[i][j] = numeroCorrecto;
+                            document.getElementById("aviso").textContent =
+                                "¡Pista aplicada! Se ha corregido una celda.";
+                            refrescarTableroVisual();
+                            return;
+                        }
+                    }
+                }
             }
         }
     }
@@ -338,6 +368,7 @@ function resolverJuegoAutomatico(){
     juegoTerminado = true;
     detenerCronometro();
     refrescarTableroVisual();
+    actualizarContadoresInfo();
     aplicarEstiloMagicoResuelto();
     document.getElementById("aviso").style.color = "#27ae60";
     document.getElementById("aviso").textContent = "\u00a1Soluci\u00f3n cargada correctamente!";
