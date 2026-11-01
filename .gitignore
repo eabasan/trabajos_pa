@@ -4,10 +4,15 @@
 /.nb-gradle/
 /build/
 /dist/
+/.dist/
+**/nbproject/
+**/.dist/
 
-# Archivos privados de NetBeans
-**/nbproject/private/
+# Evitar subir la carpeta interna de servidor web de NetBeans
+**/public_html/
 
-# Archivos temporales
+# Archivos temporales y del sistema
 *.log
 *.tmp
+.DS_Store
+Thumbs.db

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="es">
+    <head>
+        <title>Ejercicio 2 - Consola SOC Ciberseguridad</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <header>
+            <h1>Centro de Operaciones de Ciberseguridad</h1>
+        </header>
+
+        <main id="contenedor">
+            <section id="zona_trabajo">
+                <div id="pantalla_inicio">
+                    <p>
+                        Eres un analista del Centro de Operaciones de Ciberseguridad (SOC).
+                        Deber&aacute;s resolver un turno de 5 incidencias que amenazan la 
+                        infraestructura inform&aacute;tica de la universidad. Cada una con un l&iacute;mite de 
+                        <strong>25 segundos</strong>. Las respuestas r&aacute;pidas se bonifican y los fallos se penalizan.
+                    </p>
+                    <button type="button" id="botonIniciar" onclick="iniciarTurno()">Iniciar turno</button>
+                </div>
+
+                <div id="zona_incidencia" class="oculto"></div>
+
+                <div id="panel_explicacion" class="oculto"></div>
+
+                <div id="zona_informe" class="oculto"></div>
+            </section>
+             <section id="panel_metricas">
+                <p>Puntuaci&oacute;n: <strong id="puntos">0</strong> pts</p>
+                <p>Progreso: <strong id="incidencia_actual">0</strong> / 5</p>
+                <p>Tiempo restante: <strong id="reloj">25</strong> s</p>
+                
+                <div id="barra_progreso_fondo">
+                    <div id="barra_progreso"></div>
+                </div>
+                
+                <p id="aviso_tiempo" class="oculto">Atenci&oacute;n: poco tiempo de respuesta</p>
+            </section>
+
+            <section id="panel_historial">
+                <h2>Historial de Actividad</h2>
+                <ul id="lista_historial"></ul>
+            </section>
+        </main>
+
+        <script src="ej2.js"></script>
+    </body>
+</html>

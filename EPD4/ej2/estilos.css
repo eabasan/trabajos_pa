@@ -1,0 +1,213 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E9F1FA;
+    color: #333333;
+    margin: 0;
+    padding: 30px 15px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #213F99;
+    margin: 0;
+}
+
+#contenedor {
+    max-width: 650px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border: 1px solid #D9E2EC;
+    border-radius: 8px;
+    padding: 25px 30px;
+}
+
+#panel_metricas {
+    background-color: #F8FAFC;
+    border: 1px solid #D9E2EC;
+    border-radius: 6px;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+}
+
+#panel_metricas p {
+    margin: 6px 0;
+    font-size: 0.95em;
+}
+
+#barra_progreso_fondo {
+    width: 100%;
+    height: 12px;
+    background-color: #E2E8F0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#barra_progreso {
+    width: 0%;
+    height: 100%;
+    background-color: #213F99;
+}
+
+#aviso_tiempo {
+    color: #C53030;
+    font-weight: bold;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.reloj_alerta {
+    color: #C53030;
+    font-weight: bold;
+}
+
+#pantalla_inicio {
+    text-align: center;
+    padding: 10px 0;
+}
+
+#pantalla_inicio p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #213F99;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #001F66;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#zona_incidencia {
+    margin-top: 15px;
+}
+
+.tarjeta_pregunta {
+    border: 1px solid #D9E2EC;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #FAFCFE;
+}
+
+.categoria {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 3px 8px;
+    background-color: #213F99;
+    color: #FFFFFF;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.gravedad {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 3px 8px;
+    margin-left: 5px;
+    border-radius: 4px;
+    border: 1px solid #CCCCCC;
+}
+
+.lista_opciones {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.btn_opcion {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 8px;
+    padding: 10px 14px;
+    background-color: #FFFFFF;
+    color: #333333;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    font-weight: normal;
+}
+
+/* Clase aplicada dinámicamente por mouseover / mouseout según el guion */
+.boton_hover {
+    background-color: #F1F5F9;
+    color: #FFFFFF;
+    border-color: #213F99;
+}
+
+.opcion_correcta {
+    background-color: #2E7D32;
+    color: #FFFFFF;
+    border-color: #2E7D32;
+    font-weight: bold;
+}
+
+.opcion_incorrecta {
+    background-color: #C62828;
+    color: #FFFFFF;
+    border-color: #C62828;
+}
+
+#panel_explicacion {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 4px;
+    border-left: 4px solid #213F99;
+    background-color: #F8FAFC;
+    font-size: 0.9em;
+}
+
+#panel_historial {
+    margin-top: 25px;
+    border-top: 1px solid #D9E2EC;
+    padding-top: 15px;
+}
+
+#panel_historial h2 {
+    font-size: 1.1em;
+    color: #213F99;
+    margin-bottom: 10px;
+}
+
+#lista_historial {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.item_historial {
+    font-size: 0.85em;
+    padding: 8px 10px;
+    border-bottom: 1px solid #F1F5F9;
+    line-height: 1.4;
+}
+
+.oculto {
+    display: none;
+}
