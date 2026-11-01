@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misi&oacute;n Apolo</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Misi&oacute;n Apolo</h1>
+        <div>Estado: <strong id="estado">En espera</strong></div>
+        <div>Tiempo: <span id="reloj" class="reloj">90 s</span></div>
+        <div>Sistemas: <strong id="progreso">0 de 5</strong></div>
+    </header>
+
+    <div class="acciones">
+        <button id="btn-iniciar" type="button">Iniciar misi&oacute;n</button>
+        <button id="btn-lanzar" type="button" disabled>Lanzar nave</button>
+        <button id="btn-abandonar" type="button" disabled>Abandonar misi&oacute;n</button>
+        <button id="btn-reiniciar" type="button" class="oculto">Nueva misi&oacute;n</button>
+    </div>
+
+    <div id="popup" class="popup oculto"></div>
+
+    <div class="cuerpo">
+        <section id="panel-sistemas" class="panel-sistemas">
+            <div class="tarjeta" id="sis-0" data-idx="0">
+                <h3>1. Energ&iacute;a</h3>
+                <p class="estado-sis">Desactivado</p>
+                <button type="button" class="btn-act" disabled>Activar</button>
+            </div>
+            <div class="tarjeta" id="sis-1" data-idx="1">
+                <h3>2. Comunicaciones</h3>
+                <p class="estado-sis">Desactivado</p>
+                <button type="button" class="btn-act" disabled>Activar</button>
+            </div>
+            <div class="tarjeta" id="sis-2" data-idx="2">
+                <h3>3. Navegaci&oacute;n</h3>
+                <p class="estado-sis">Desactivado</p>
+                <button type="button" class="btn-act" disabled>Activar</button>
+            </div>
+            <div class="tarjeta" id="sis-3" data-idx="3">
+                <h3>4. Soporte vital</h3>
+                <p class="estado-sis">Desactivado</p>
+                <button type="button" class="btn-act" disabled>Activar</button>
+            </div>
+            <div class="tarjeta" id="sis-4" data-idx="4">
+                <h3>5. Propulsi&oacute;n</h3>
+                <p class="estado-sis">Desactivado</p>
+                <button type="button" class="btn-act" disabled>Activar</button>
+            </div>
+        </section>
+
+        <aside>
+            <h3>Panel Operativo</h3>
+            <p id="info-texto">Haz clic en un sistema para ver su descripci&oacute;n (doble clic para especificaciones).</p>
+        </aside>
+    </div>
+
+    <div id="informe" class="informe oculto"></div>
+
+    <footer class="consola" id="consola"></footer>
+
+    <script type="text/javascript" src="mision.js"></script>
+</body>
+</html>
