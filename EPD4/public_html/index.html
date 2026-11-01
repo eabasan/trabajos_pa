@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuadrado Mágico</title>
+    <style>
+        /* Estados visuales obligatorios según el enunciado */
+        td { width: 60px; height: 60px; text-align: center; font-size: 24px; cursor: pointer; border: 1px solid black; }
+        .seleccionada { background-color: lightblue; }
+        .vacia { background-color: white; border: 2px dotted red; }
+        .completada { background-color: lightgray; }
+        .resuelta { background-color: gold; }
+        .incompleta { background-color: red; } 
+        
+        #mensaje { white-space: pre-line; color: red; font-weight: bold; margin: 10px 0; min-height: 60px;}
+    </style>
+</head>
+<body>
+    <div id="info">
+        <p>Restantes: <span id="restantes">9</span> | Suma objetivo: 15</p>
+        <p>Tiempo: <span id="tiempo">0</span>s | Intentos: <span id="intentos">0</span></p>
+    </div>
+
+    <table id="tablero">
+        <tr><td id="c0"></td><td id="c1"></td><td id="c2"></td></tr>
+        <tr><td id="c3"></td><td id="c4"></td><td id="c5"></td></tr>
+        <tr><td id="c6"></td><td id="c7"></td><td id="c8"></td></tr>
+    </table>
+
+    <div id="mensaje"></div>
+
+    <button onclick="reiniciarJuego()">Nueva partida</button>
+    <button onclick="resolverJuego()">Resolver</button>
+
+    <script>
+        let celdaActiva = null;
+        let cronometro;
+        let tiempo = 0;
+        let intentos = 0;
+        let juegoTerminado = false;
+        const solucion = [2, 7, 6, 9, 5, 1, 4, 3, 8];
+
+        window.addEventListener('load', iniciarJuego);
+
+        function iniciarJuego() {
+            const celdas = document.querySelectorAll('td');
+            celdas.forEach(c => c.addEventListener('click', seleccionarCelda));
+            document.addEventListener('keydown', validarTecla);
+            document.addEventListener('keyup', verificarEnTiempoReal);
+            reiniciarJuego();
+        }
+
+        function seleccionarCelda(event) {
+            if (juegoTerminado) return;
+            if (celdaActiva) celdaActiva.classList.remove('seleccionada');
+            celdaActiva = event.target;
+            celdaActiva.classList.add('seleccionada');
+        }
+
+        function validarTecla(event) {
+            if (juegoTerminado || !celdaActiva) return;
+            
+            const tecla = event.key || event.keyCode;
+            
+            if (tecla >= '1' && tecla <= '9') {
+                const celdas = Array.from(document.querySelectorAll('td'));
+                const repetido = celdas.some(c => c !== celdaActiva && c.textContent === tecla);
+                
+                if (repetido) {
+                    mostrarMensaje("No puedes repetir números\nCada cifra del 1 al 9 debe aparecer solo una vez");
+                } else {
+                    celdaActiva.textContent = tecla;
+                    mostrarMensaje("");
+                }
+            } else if (tecla.length === 1) {
+                mostrarMensaje("Solo se aceptan números del 1 al 9.");
+            } else if (tecla === 'Backspace' || tecla === 'Delete') {
+                celdaActiva.textContent = '';
+                mostrarMensaje("");
+            }
+            actualizarEstadosVisuales();
+        }
+
+        function verificarEnTiempoReal(event) {
+            if (juegoTerminado) return;
+            verificarCuadradoMagico();
+        }
+
+        function verificarCuadradoMagico() {
+            const celdas = document.querySelectorAll('td');
+            const vals = Array.from(celdas).map(c => parseInt(c.textContent) || 0);
+            
+            if (vals.includes(0)) return; 
+
+            const sumas = [
+                vals[0]+vals[1]+vals[2], vals[3]+vals[4]+vals[5], vals[6]+vals[7]+vals[8], 
+                vals[0]+vals[3]+vals[6], vals[1]+vals[4]+vals[7], vals[2]+vals[5]+vals[8], 
+                vals[0]+vals[4]+vals[8], vals[2]+vals[4]+vals[6] 
+            ];
+
+            if (sumas.every(s => s === 15)) {
+                juegoTerminado = true;
+                clearInterval(cronometro);
+                celdas.forEach(c => c.className = 'resuelta');
+                mostrarMensaje(`¡FELICIDADES!\nHas resuelto el cuadrado mágico en ${tiempo} segundos\nSuma mágica: 15\n¿Quieres intentar otro?`);
+            } else {
+                intentos++;
+                document.getElementById('intentos').textContent = intentos;
+                celdas.forEach(c => {
+                    if (c.textContent === '') c.classList.add('incompleta');
+                });
+                mostrarMensaje("Este no es un cuadrado mágico\nLas sumas no coinciden. ¡Sigue intentando!");
+                
+                if (intentos % 3 === 0) darPista();
+            }
+        }
+
+        function reiniciarJuego() {
+            const celdas = document.querySelectorAll('td');
+            celdas.forEach(c => { c.textContent = ''; });
+            if (celdaActiva) celdaActiva.classList.remove('seleccionada');
+            
+            celdaActiva = document.getElementById('c4');
+            celdaActiva.classList.add('seleccionada');
+            
+            juegoTerminado = false;
+            tiempo = 0;
+            intentos = 0;
+            document.getElementById('tiempo').textContent = tiempo;
+            document.getElementById('intentos').textContent = intentos;
+            mostrarMensaje("");
+            
+            actualizarEstadosVisuales();
+            
+            clearInterval(cronometro);
+            cronometro = setInterval(() => {
+                if (!juegoTerminado) {
+                    tiempo++;
+                    document.getElementById('tiempo').textContent = tiempo;
+                }
+            }, 1000);
+        }
+
+        function actualizarEstadosVisuales() {
+            let vacias = 0;
+            document.querySelectorAll('td').forEach(c => {
+                // Ahora limpiamos también la clase 'resuelta' para quitar el dorado
+                c.classList.remove('vacia', 'completada', 'incompleta', 'resuelta');
+                if (c.textContent === '') {
+                    c.classList.add('vacia');
+                    vacias++;
+                } else {
+                    c.classList.add('completada');
+                }
+                if (c === celdaActiva) c.classList.add('seleccionada');
+            });
+            document.getElementById('restantes').textContent = vacias;
+        }
+
+        function darPista() {
+            const celdas = document.querySelectorAll('td');
+            for (let i = 0; i < 9; i++) {
+                if (celdas[i].textContent !== solucion[i]) {
+                    celdas[i].textContent = solucion[i];
+                    actualizarEstadosVisuales();
+                    break;
+                }
+            }
+        }
+
+        function resolverJuego() {
+            const celdas = document.querySelectorAll('td');
+            for (let i = 0; i < 9; i++) celdas[i].textContent = solucion[i];
+            actualizarEstadosVisuales();
+            verificarCuadradoMagico();
+        }
+
+        function mostrarMensaje(texto) {
+            document.getElementById('mensaje').innerText = texto;
+        }
+    </script>
+</body>
+</html>
