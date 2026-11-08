@@ -1,0 +1,60 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+header {
+    background-color: #1e4d73;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+main {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.destino {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #cccccc;
+}
+
+.destino img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* Titres des destinations */
+.destino h2 {
+    color: #1e4d73;
+}
+
+.destino p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+footer {
+    background-color: #1e4d73;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
